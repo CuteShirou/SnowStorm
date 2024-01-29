@@ -39,6 +39,10 @@ nav ul {
     display: flex;
 }
 
+nav li {
+    margin: 0 12px;
+}
+
 
 .ImageKey1 {
     display: block;
@@ -71,6 +75,7 @@ nav ul {
 .nav-bar {
     display: flex;
     font-family: 'Bebas Neue', sans-serif;
+
 }
 
 footer {
