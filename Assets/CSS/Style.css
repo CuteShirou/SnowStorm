@@ -1,0 +1,140 @@
+* {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px
+}
+
+header {
+    background-image: url("../IMG/Rectangle2.png"); 
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    margin: auto;
+    object-fit:contain;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F5EDED;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.part1 {
+    background-image: url("../IMG/image 35.png");
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+
+.ImageKey1 {
+    display: block;
+    margin: 0 auto 0 auto;
+    padding: 5vh 0 5vh 0;
+    width: 1330px;
+    height: 700px;
+}
+
+.part2 {
+    background-image: url("../IMG/image 36.png");
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.block {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+.top-page {
+    display: flex;
+    font-family: "Open Sans"
+}
+
+.nav-bar {
+    display: flex;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+footer {
+    text-align: center;
+    color: white;
+}
+
+.footer {
+    display: flex;
+    background-color: #333;
+    color: #fff;
+    bottom: 0;
+    width: 100%;
+    font-size: 150%;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+nav ul {
+    color: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+ul{
+    list-style-type: none;
+    text-align: left;
+    display: block;
+    margin: 0 auto 0 auto;
+    padding-top: 69px;
+    padding-left: 27px;
+}
+
+.reseauLi{
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.reseaux{
+    display: flex;
+}
+
+.imgFooter{
+    height: 15vh;
+    width: auto;
+}
+
+.blockUni1 {
+    width: 412px;
+    height: 320px;
+    left: 55px;
+    top: 1164px;
+    background: #094FAC;
+    display: flex;
+    margin: 0 auto 0 auto;
+}
+
+.blockUni2 {
+    width: 412px;
+    height: 320px;
+    left: 55px;
+    top: 1164px;
+    background: #094FAC;
+    display: flex;
+    margin: 0 auto 0 auto;
+}
