@@ -54,14 +54,6 @@ nav li {
     margin: 0 12px;
 }
 
-.ImageKey1 {
-    display: block;
-    margin: 0 auto 0 auto;
-    padding: 5vh 0 5vh 0;
-    width: 1330px;
-    height: 700px;
-}
-
 .part2 {
     background-image: url("../IMG/image 36.png");
     display: grid;
