@@ -1,20 +1,32 @@
-<form action="action_page.php">
+<form action="Register.php">
   <div class="container">
-    <h1>Register</h1>
-    <p>Please fill in this form to create an account.</p>
+    <h1>S'enregrister</h1>
+    <p>Pour créer un compte veuillez compléter le formulaire ci-dessous.</p>
     <hr>
 
     <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+    <input type="text" placeholder="Entrer Email" name="email" id="email" required>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+    <label for="psw"><b>Mot de passe</b></label>
+    <input type="password" placeholder="Entrer mot de passe" name="psw" id="psw" required>
 
-    <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+    <label for="psw-repeat"><b>Répéter le mot de passe</b></label>
+    <input type="password" placeholder="Répéter mot de passe" name="psw-repeat" id="psw-repeat" required>
     <hr>
 
-    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+    <label for="Nom"><b>Nom</b></label>
+    <input type="text" placeholder="Entrer Nom" name="nom" id="nom" required>
+    <hr>
+
+    <label for="Prénom"><b>Prénom</b></label>
+    <input type="text" placeholder="Entrer Prénom" name="prenom" id="prenom" required>
+    <hr>
+    
+    <label for="Prénom"><b>Date de naissance</b></label>
+    <input type="date" placeholder="Entrer Date de naissance" name="date" id="date" min="01/01/1900" max="" required>
+    <hr>
+
+    <p>Si vous créez un compte vous êtes alors en accord avec les <a href="#">conditions d'utilisation</a>.</p>
     <button type="submit" class="registerbtn">S'enregistrer</button>
   </div>
 

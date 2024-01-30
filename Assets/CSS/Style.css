@@ -65,14 +65,28 @@ ul{
     cursor: pointer;
 }
 
+.titrepage {
+    font-size: 5vh;
+    font-family: "Bebas Neue";
+    margin-left: 4%;
+    position: relative;
+    top: 3vh;
+
+}
+
+.generaltext {
+    font-family: "Open Sans";
+    font-size: 5vh;
+}
+
 .opt {
     height: 70%;
     width: auto;
-    padding-left: 60vw;
+    padding-right: 10vw;
     margin: 0 -30vw;
+    right: -70vw;
     display: block;
-    z-index: 0;
-    position: relative
+    position: relative;
 }
 
 .nav-but {
@@ -227,6 +241,27 @@ body {
     transition: left 2s;
 }
 
+    /* Galerie*/
+
+.part3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    margin: 0;
+    padding: 2vh 0 5vh 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.transblock {
+
+    height: 30vh;
+    background: #ffffff00;
+    display: flex;
+    margin: 0 auto 0 auto;
+    float: left;
+}
 
 /*cFooter */
 
@@ -241,8 +276,14 @@ body {
     font-size: 150%;
 }
 
-footer ul li {
+footer ul li a {
     font-family: "Roboto";
+    text-decoration: none;
+    color: #000000;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
 }
 
 footer ul h4 {
@@ -264,4 +305,24 @@ footer ul h4 {
     display: flex;
 }
 
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+/* Create four equal columns that sits next to each other */
+.column {
+-ms-flex: 33%; /* IE10 */
+flex: 33%;
+max-width: 100%;
+padding: 0 4px;
+}
 
+.column img {
+margin-top: 8px;
+vertical-align: middle;
+width: 100%;
+}
