@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
-<link rel="stylesheet" type="text/css" href="Assets/CSS/Style.css">
+<link rel="stylesheet" type="text/css" href="Assets/CSS/FooterStyle.css">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
 </head>
 <footer class="footer">
     <ul>
-        <li><a href="/Assets/IMG/image 29.png"></a></li>
+        <li><img src="/Assets/IMG/image 29.png" alt="logo" class="imgFooter"></li>
         <li><h3>SNOWSTORM</h3></li>
     </ul>
     <ul>
@@ -34,10 +34,11 @@
         <li>Mes customs</li>
         <li>Mes informations</li>
     </ul>
-    <ul class="reseaux">
+    <ul>
         <h4>Nos réseaux</h4>
-        <li><img src="/Assets/IMG/image 33.png" alt="facebook"></li>
-        <li><img src="/Assets/IMG/image 34.png" alt="instagram"></li>
-        <li><img src="/Assets/IMG/image 32.png" alt="youtube"></li>
-    </ul>
+        <div class="reseaux">
+            <li class="reseauLi"><img src="/Assets/IMG/image 33.png" alt="facebook"></li>
+            <li class="reseauLi"><img src="/Assets/IMG/image 34.png" alt="instagram"></li>
+            <li class="reseauLi"><img src="/Assets/IMG/image 32.png" alt="youtube"></li></div>
+        </ul>
 </footer>
