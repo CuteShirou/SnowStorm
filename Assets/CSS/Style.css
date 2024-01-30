@@ -22,6 +22,7 @@ header {
     margin: auto;
     object-fit:contain;
     width: 100%;
+    height: 12vh;
 }
 
 .logo {
@@ -82,15 +83,20 @@ ul{
 .opt {
     height: 70%;
     width: auto;
-    padding-right: 10vw;
-    margin: 0 -30vw;
-    right: -70vw;
+    margin-left: -13vw;
+    right: -55vw;
+    top: 0.7vh;
     display: block;
     position: relative;
 }
 
 .nav-but {
-    font-size: 3vh;
+    white-space: nowrap;
+    font-size: 3.3vh;
+}
+
+.nav-but:hover {
+    text-decoration: underline;
 }
 
 /* body */
@@ -139,7 +145,6 @@ body {
     left: -2000px;
 }
 
-
 .slide {
     float: left;
     margin: 0px;
@@ -152,6 +157,10 @@ body {
     height: 600px;
     clear: both;
     position: relative;
+    -webkit-transition: left 2s;
+    -moz-transition: left 2s;
+    -o-transition: left 2s;
+    transition: left 2s;
 }
 
 .buttons {
@@ -160,6 +169,21 @@ body {
     right: -275px;
 }
 
+.buttons a {
+    display: inline-block;
+    height: 5px;
+    width: 110px;
+    background-color: #000000;
+
+}
+
+.buttons a:active {
+    background-color: #F5EDED;
+}
+
+.buttons a:hover {
+    background-color: #F5EDED;
+}
 
     /* part 2 */
 
@@ -182,6 +206,13 @@ body {
     display: flex;
     margin: 0 auto 0 auto;
     float: left;
+    transform: scale(1,1);
+    transition: transform 1s;
+}
+
+.block:hover {
+    transform: scale(1.1,1.1);
+    transition: transform 1s;
 }
 
 .block img {
@@ -191,35 +222,21 @@ body {
     margin: auto ;
 }
 
-
-.buttons a {
-    display: inline-block;
-    height: 5px;
-    width: 110px;
-    background-color: #000000;
-
-}
-
 .block a:active:after {
     color: #F5EDED;
 }
 
-.buttons a:hover {
-    background-color: #F5EDED;
-	-webkit-transform: scale(1.3);
-	transform: scale(1.3);
-  }
-
 .compare {
     position: relative;
     width: 0;
+    height: 0.1vh;
     display: flex;
     white-space: nowrap;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #F5EDED;
     text-decoration: none;
-    font-size: 85%;
-    left: 25vh;
+    font-size: 2.7vh;
+    left: 24vh;
     top: 2vh;
 }
 
@@ -230,15 +247,23 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
     text-decoration: none;
-    font-size: 85%;
+    font-size: 2.7vh;
     width: 0;
     height: 0;
-    left: -28vh;
+    left: -30vh;
     top: 24.5vh;
     -webkit-transition: left 2s;
     -moz-transition: left 2s;
     -o-transition: left 2s;
     transition: left 2s;
+}
+
+.compare:hover {
+    text-decoration: underline;
+}
+
+.ref:hover {
+    text-decoration: underline;
 }
 
     /* Galerie*/
@@ -263,7 +288,7 @@ body {
     float: left;
 }
 
-/*cFooter */
+/*Footer */
 
 .footer {
     text-align: center;
@@ -280,6 +305,7 @@ footer ul li a {
     font-family: "Roboto";
     text-decoration: none;
     color: #000000;
+    font-size: 60%;
 }
 
 footer ul li a:hover {
@@ -288,6 +314,7 @@ footer ul li a:hover {
 
 footer ul h4 {
     font-family: "Roboto";
+    font-size: 80%;
 }
 
 .imgFooter{
@@ -306,25 +333,24 @@ footer ul h4 {
 }
 
 .row {
-    display: -ms-flexbox; /* IE10 */
+    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding: 0 4px;
   }
-  
-/* Create four equal columns that sits next to each other */
+
 .column {
--ms-flex: 33%; /* IE10 */
-flex: 33%;
-max-width: 100%;
-padding: 0 4px;
+    -ms-flex: 33%;
+    flex: 33%;
+    max-width: 100%;
+    padding: 0 4px;
 }
 
 .column img {
-margin-top: 8px;
-vertical-align: middle;
-width: 100%;
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
 }
 
 h1 {
