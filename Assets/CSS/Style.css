@@ -326,3 +326,20 @@ margin-top: 8px;
 vertical-align: middle;
 width: 100%;
 }
+
+h1 {
+    font-family: "Bebas Neue";
+    font-size: 5vh;
+    text-align: left;
+    margin-top: 5vh;
+    margin-left: 5vh;
+}
+
+.grideimg {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vh;
+    justify-items: center;
+    align-items: center;
+    padding: 2vh 0 5vh 0;
+}
