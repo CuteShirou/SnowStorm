@@ -1,2 +1,2 @@
 # SnowStorm
-Un site wlh bieng
+Un site qui tente d'être pro

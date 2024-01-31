@@ -1,20 +1,20 @@
-<div class="container">
-  <form action="/action_page.php">
+<div class="container-login">
+  <form action="Login.php">
     <div class="row">
-      <h2 style="text-align:center">Login with Social Media or Manually</h2>
+      <h2 style="text-align:center">Se connecter avec Google ou manuellement</h2>
       <div class="vl">
         <span class="vl-innertext">or</span>
       </div>
 
       <div class="col">
         <a href="#" class="google btn">
-          <i class="fa fa-google fa-fw"></i> Login with Google+
+          <i class="fa fa-google fa-fw"></i> Se connecter avec Google
         </a>
       </div>
 
       <div class="col">
         <div class="hide-md-lg">
-          <p>Or sign in manually:</p>
+          <p>Se connecter manuellement : </p>
         </div>
 
         <input type="text" name="username" placeholder="Username" required>
@@ -29,10 +29,10 @@
 <div class="bottom-container">
   <div class="row">
     <div class="col">
-      <a href="#" style="color:white" class="btn">Sign up</a>
+      <a href="#" style="color:white" class="btn">S'enregistrer</a>
     </div>
     <div class="col">
-      <a href="#" style="color:white" class="btn">Forgot password?</a>
+      <a href="#" style="color:white" class="btn">Mot de passe oubliée ?</a>
     </div>
   </div>
 </div>

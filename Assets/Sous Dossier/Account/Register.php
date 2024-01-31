@@ -1,5 +1,5 @@
 <form action="Register.php">
-  <div class="container">
+  <div class="container-register">
     <h1>S'enregrister</h1>
     <p>Pour créer un compte veuillez compléter le formulaire ci-dessous.</p>
     <hr>

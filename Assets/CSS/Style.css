@@ -12,6 +12,10 @@
     font-family: Roboto;
     src: url("../Fonts/Roboto.ttf");
 }
+@font-face {
+    font-family: OpenSans;
+    src: url("../Fonts/OpenSans-VariableFont.ttf");
+}
 
 header {
     background-image: url("../IMG/Rectangle2.png"); 
@@ -361,6 +365,8 @@ h1 {
     margin-left: 5vh;
 }
 
+/* Personaliser */
+
 .grideimg {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -368,4 +374,23 @@ h1 {
     justify-items: center;
     align-items: center;
     padding: 2vh 0 5vh 0;
+}
+
+.model {
+    text-align: center;
+    padding-top: -10vh;
+}
+
+.model img {
+    height: 57%;
+    width: auto;
+    display: block;
+    margin: auto ;
+}
+
+.model p {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    font-size: 2vh;
+    font-family: OpenSans;
 }
