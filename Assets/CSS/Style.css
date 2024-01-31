@@ -394,3 +394,43 @@ h1 {
     font-size: 2vh;
     font-family: OpenSans;
 }
+
+
+/* Galerie */
+.grideGalerie {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vh;
+    justify-items: center;
+    align-items: baseline ;
+    padding: 2vh 0 5vh 0;
+    text-align: center;
+    margin-bottom: auto;
+
+}
+
+.grideGalerie p {
+    margin: 0.5vh 0;
+    font-family: "Open Sans";
+    font-size: 24px;
+}
+
+.wrapper > div {
+    padding: 2em;
+    font-family: "Open Sans";
+    font-size: 30px;
+    margin-bottom: auto;
+
+  }
+
+  .wrapper > div > div {
+    padding: 1em;
+    font-family: "Open Sans";
+    padding: 0.4em;
+  }
+
+.avis {
+    border: 2px solid #000000;
+    border-radius: 1px;
+    padding: 1em;
+}
