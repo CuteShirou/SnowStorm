@@ -512,6 +512,8 @@ input[type="radio"] {
     border: 0.15em solid currentColor;
     border-radius: 50%;
     transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
 }
     
 input[type="radio"]::before {
@@ -527,4 +529,64 @@ input[type="radio"]::before {
 input[type="radio"]:checked::before {
     transform: scale(1);
 }
-    
+
+.picBuilder {
+    display: flex;
+    justify-content: center;
+}
+
+.picItself {
+    width: 50%;
+    height: auto;
+}
+
+.steps {
+    display: flex;
+    white-space: nowrap;
+}
+
+.uncomplete {
+    display: flex;
+    align-self: center;
+}
+
+.paraSelect {
+    padding: 0.3vh 2vw;
+    background-color: rgb(173, 173, 173);
+}
+
+.para {
+    padding: 0.3vh 2vw;
+    background-color: grey;
+    border: solid 0.2vh black;
+    text-decoration: none;
+    color: black;
+    justify-items: center;
+    align-items: center;
+}
+
+.save {
+    padding: 0.3vh 2vw;
+    background-color: grey;
+    border: solid 0.2vh black;
+    text-decoration: none;
+    color: black;
+    justify-items: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.saver {
+    align-self: center;
+    margin-left: 45vw;
+}
+
+.switch {
+    margin-bottom: 4vh;
+    margin-left: 2vw;
+}
+
+.backplate {
+    margin-left: 2vw;
+    margin-bottom: 5vh;
+}

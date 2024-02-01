@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="fr">
+
+<!-- Inclusion des feuilles de style et des polices -->
 <link rel="stylesheet" type="text/css" href="../../CSS/Style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
 
 <head>
+    <!-- Métadonnées de la page -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Custom Builder</title>
 </head>
 
 <header>
+    <!-- En-tête du site avec le logo et la navigation -->
     <div>
-        <img src="Assets/IMG/image 29.png" alt="Logo du site" class="logo">
+        <img src="../../IMG/image 29.png" alt="Logo du site" class="logo">
     </div>
     <nav>
+        <!-- Barre de navigation avec des liens vers différentes sections -->
         <ul class="nav-bar">
             <li><a href="../../../Index.html" class="brand">SNOWSTORM.GG</a></li>
-            <li><img src="Assets/IMG/118089 1.png" class="opt"></a></li>
-            <li><img src="Assets/IMG/profil 1.png" class="opt"></a></li>
-            <li><img src="Assets/IMG/image 31.png" class="opt"></a></li>
+            <li><img src="../../IMG/118089 1.png" class="opt"></li> <!-- Modification : balise incorrecte fermée -->
+            <li><img src="../../IMG/profil 1.png" class="opt"></li> <!-- Modification : balise incorrecte fermée -->
+            <li><img src="../../IMG/image 31.png" class="opt"></li> <!-- Modification : balise incorrecte fermée -->
         </ul>
         <ul class="nav-bar">
             <li><a href="Boutique.html" class="nav-but">NOS PRODUITS</a></li>
@@ -34,26 +39,33 @@
 </header>
 
 <body>
+    <!-- Corps de la page avec le titre "Référence modèle" et différentes sections pour le processus de personnalisation -->
     <h3>Référence modèle</h3>
     <div class="steps">
-        <p>Étape 1 : Choix  de la base</p>
+        <!-- Section pour les étapes du processus -->
+        <p class="paraSelect">Étape 1 : Choix de la base</p>
         <div class="uncomplete">
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
+            <!-- Bloc indiquant les étapes incomplètes -->
+            <a href="" class="para">2</a>
+            <a href="" class="para">3</a>
+            <a href="" class="para">4</a>
+        </div>
+        <div class="saver">
+            <!-- Bouton pour sauvegarder la configuration -->
+            <a href="" class="save">Sauvegarder ma configuration</a>
         </div>
     </div>
-    <div class="save">
-        <a href="">Sauvergarder ma configuration</a>
-    </div>
-    <div class="img">
-        <img src="../../IMG/image 10.png" alt="Preview">
+    <div class="picBuilder">
+        <!-- Section pour l'affichage de l'image de prévisualisation -->
+        <img src="../../IMG/image 10.png" alt="Preview" class="picItself">
     </div>
     <div class="switch">
+        <!-- Section pour le choix du switch avec une liste déroulante -->
         <p>Choix du switch</p>
         <div class="dropdown">
             <button class="dropbtn">Dropdown</button>
             <div class="dropdown-content">
+                <!-- Options de la liste déroulante pour les types de switch -->
                 <a href="#">Cherry Red</a>
                 <a href="#">Cherry Brown</a>
                 <a href="#">Cherry Blue</a>
@@ -66,21 +78,39 @@
                 <a href="#">Gateron Clear</a>
             </div>
         </div>
-        <fieldset>
-            <legend>Couleur de backplate :</legend>
+    </div>
+    <!-- Section pour la sélection de la couleur de backplate avec des boutons radio -->
+    <div class="backplate">
+        <p>Couleur de backplate :</p>
             <label class="form-control">
-                    <input type="radio" name="radio" />
-                    Radio
-                </label>
-                <label class="form-control">
-                    <input type="radio" name="radio" />
-                    Radio - checked
-                </label>
-        </fieldset>
+                <input type="radio" name="radio" />
+                Nom de la couleur + prix si frais supplémentaires
+            </label>
+            <label class="form-control">
+                <input type="radio" name="radio" />
+                Nom de la couleur + prix si frais supplémentaires
+            </label>
+            <label class="form-control">
+                <input type="radio" name="radio" />
+                Nom de la couleur + prix si frais supplémentaires
+            </label>
+            <label class="form-control">
+                <input type="radio" name="radio" />
+                Nom de la couleur + prix si frais supplémentaires
+            </label>
+            <label class="form-control">
+                <input type="radio" name="radio" />
+                Nom de la couleur + prix si frais supplémentaires
+            </label>
+            <label class="form-control">
+                <input type="radio" name="radio" />
+                Nom de la couleur + prix si frais supplémentaires
+            </label>
     </div>
 </body>
 
 <footer class="footer">
+    <!-- Pied de page avec des sections pour les informations et les liens -->
     <ul>
         <li><img src="/Assets/IMG/image 29.png" alt="logo" class="imgFooter"></li>
         <li><h3 class="brand">SNOWSTORM</h3></li>
