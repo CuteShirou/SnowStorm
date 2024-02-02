@@ -1,19 +1,15 @@
 <?php
-session_start();
-include 'BDDConnection.php';
-$bd = bdConnect(); // Connexion à la base de données
+    $serveur = "mysql-sitewebpro.alwaysdata.net";
+    $utilisateur = "345536";
+    $motDePasse = "ToutEstPasBonDansLePHP2024";
+    $baseDeDonnees = "sitewebpro_snowstorm";
+    $connexion = new mysqli($serveur, $utilisateur, $motDePasse, $baseDeDonnees);
+    if ($connexion->connect_error) {
+        die("La connexion à la base de données a échoué : " . $connexion->connect_error);
+    }
+?>
 
-if (isset($_SESSION['id'])) {
-  // Code à exécuter si la session 'id' est définie
-} else {
-  if (!empty($_POST)) {
-    // Utilisation de requêtes préparées pour éviter les injections SQL
-    $stmt = $bd->prepare("INSERT INTO table (numeroCarte, NomCarte, dateExpi, cryptogramme, InfoPay) VALUES (?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssss", $_POST['numeroCarte'], $_POST['NomCarte'], $_POST['dateExpi'], $_POST['cryptogramme'], $_POST['InfoPay']);
-    $stmt->execute();
-  }
-}
-?>  
+
 
 <!DOCTYPE html>
 <html lang="fr">

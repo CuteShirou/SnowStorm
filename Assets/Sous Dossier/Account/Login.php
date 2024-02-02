@@ -1,3 +1,41 @@
+<?php
+session_start();
+if (isset($_POST["connect"])){
+    if(empty($_POST["mail"])){
+    } else {
+        if(empty($_POST["mdp"])){
+        } else {
+            $Mail = htmlentities($_POST["mail"], ENT_QUOTES, "UTF-8");
+            $MDP = htmlentities($_POST["mdp"], ENT_QUOTES, "UTF-8");
+
+            include('BDDConnection.php');
+
+            $query = $pdo->prepare("SELECT ID FROM Users WHERE Users.Email=:mail AND Users.Password=:mdp AND Users.Admin=true");
+            $query->bindParam(':mail',$Mail , PDO::PARAM_STR);
+            $query->bindParam(':mdp',$MDP , PDO::PARAM_STR);
+            $query->execute();
+
+            if ($query->rowCount() == 1) {
+                $_SESSION['ID'] = $query->fetchColumn();
+                header('Location: quiz.php');
+            } else {
+                $query = $pdo->prepare("SELECT ID FROM Users WHERE Users.Email=:mail AND Users.Password=:mdp");
+                $query->bindParam(':mail',$Mail , PDO::PARAM_STR);
+                $query->bindParam(':mdp',$MDP , PDO::PARAM_STR);
+                $query->execute();
+                if ($query->rowCount() == 1) {
+                    $_SESSION['ID'] = $query->fetchColumn();//$rwo = fetch puis $row["ID"]
+                    header('Location: quiz.php');
+                }
+            }
+        }
+    }
+} else {
+    echo "pas de connect";
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <link rel="stylesheet" type="text/css" href="../../CSS/AccountGlobale.css">
@@ -13,7 +51,7 @@
 
 <body>
   <div class="container-login">
-    <form action="Login.php">
+    <form action="Login.php" method="post">
       <div class="row">
         <h2 style="text-align:center">Se connecter avec Google ou manuellement</h2>
 
@@ -27,10 +65,11 @@
           <div class="hide-md-lg">
             <p>Se connecter manuellement : </p>
           </div>
+          
+            <input type="email" placeholder="Email" name="mail">
+            <input type="password" placeholder="Mot de passe" name="mdp">
+            <input type="submit" name="connect" value="Se connecter">
 
-          <input type="text" name="username" placeholder="Username" required>
-          <input type="password" name="password" placeholder="Password" required>
-          <input type="submit" value="Login">
         </div>
 
       </div>

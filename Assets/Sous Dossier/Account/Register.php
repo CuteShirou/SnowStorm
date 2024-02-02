@@ -1,3 +1,38 @@
+<?php
+if (isset($_POST["submit"])) {
+    if (empty($_POST["mail"])) {
+    } else {
+        if (empty($_POST["mdp"])) {
+        } else {
+            if (empty($_POST["pseudo"])) {
+            } else {
+                $Mail = htmlentities($_POST["mail"], ENT_QUOTES, "UTF-8");
+                $MDP = htmlentities($_POST["mdp"], ENT_QUOTES, "UTF-8");
+                $Pseudo = htmlentities($_POST["pseudo"], ENT_QUOTES, "UTF-8");
+
+                include("php/tlt.php");
+
+                $query = $pdo->prepare("INSERT INTO `Users`(`ID`, `Username`, `Email`, `Password`, `Admin`) VALUES (NULL,:pseudo,:mail,:mdp,false)");
+                $query->bindParam(':pseudo',$Pseudo , PDO::PARAM_STR);
+                $query->bindParam(':mail',$Mail , PDO::PARAM_STR);
+                $query->bindParam(':mdp',$MDP , PDO::PARAM_STR);
+                $query->execute();
+
+                $query = $pdo->prepare("SELECT ID FROM Users WHERE Users.Email=:mail AND Users.Password=:mdp");
+                $query->bindParam(':mail',$Mail , PDO::PARAM_STR);
+                $query->bindParam(':mdp',$MDP , PDO::PARAM_STR);
+                $query->execute();
+                if ($query->rowCount() == 1) {
+                    $_SESSION['ID'] = $query->fetchColumn();
+                    header('Location: quiz.php');
+                }
+            }
+        }
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <link rel="stylesheet" type="text/css" href="../../CSS/AccountGlobale.css">
@@ -8,7 +43,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Snowstorm</title>
+    <title>S'enregistrer</title>
 </head>
 
 <body>

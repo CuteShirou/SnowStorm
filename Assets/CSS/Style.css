@@ -587,6 +587,25 @@ input[type="radio"]:checked::before {
 }
 
 .backplate {
-    margin-left: 2vw;
-    margin-bottom: 5vh;
+    padding-left: 2vw;
+    padding-bottom: 5vh;
+    border-bottom: solid black;
+}
+
+#productpres {
+    text-align: center;
+}
+
+.present {
+    display: flex;
+    text-align: justify;
+    background-color: #c8c4c4;
+    padding: 3vh 0;
+    align-items: center;
+}
+
+.present p {
+    border: solid black;
+    padding: 1vh;
+    font-family: OpenSans;
 }
