@@ -1,10 +1,7 @@
 <?php
-    $serveur = "mysql-sitewebpro.alwaysdata.net";
+    $serveur = "mysql:host=mysql-sitewebpro.alwaysdata.net;dbname=sitewebpro_snowstorm";
     $utilisateur = "345536";
     $motDePasse = "ToutEstPasBonDansLePHP2024";
-    $baseDeDonnees = "sitewebpro_snowstorm";
-    $connexion = new mysqli($serveur, $utilisateur, $motDePasse, $baseDeDonnees);
-    if ($connexion->connect_error) {
-        die("La connexion à la base de données a échoué : " . $connexion->connect_error);
-    }
+    $connexion = new PDO($serveur,$utilisateur,$motDePasse);
+    $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 ?>

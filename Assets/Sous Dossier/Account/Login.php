@@ -10,28 +10,18 @@ if (isset($_POST["connect"])){
 
             include('BDDConnection.php');
 
-            $query = $pdo->prepare("SELECT ID FROM Users WHERE Users.Email=:mail AND Users.Password=:mdp AND Users.Admin=true");
+            $query = $connexion->prepare("SELECT id FROM USERS WHERE USERS.mail=:mail AND USERS.mdp =:mdp");
             $query->bindParam(':mail',$Mail , PDO::PARAM_STR);
             $query->bindParam(':mdp',$MDP , PDO::PARAM_STR);
             $query->execute();
 
             if ($query->rowCount() == 1) {
-                $_SESSION['ID'] = $query->fetchColumn();
-                header('Location: quiz.php');
-            } else {
-                $query = $pdo->prepare("SELECT ID FROM Users WHERE Users.Email=:mail AND Users.Password=:mdp");
-                $query->bindParam(':mail',$Mail , PDO::PARAM_STR);
-                $query->bindParam(':mdp',$MDP , PDO::PARAM_STR);
-                $query->execute();
-                if ($query->rowCount() == 1) {
-                    $_SESSION['ID'] = $query->fetchColumn();//$rwo = fetch puis $row["ID"]
-                    header('Location: quiz.php');
-                }
-            }
+                $_SESSION['id'] = $query->fetchColumn();
+                header('Location: ../../../Index.html');
+            } 
         }
     }
 } else {
-    echo "pas de connect";
 }
 ?>
 
@@ -79,10 +69,10 @@ if (isset($_POST["connect"])){
   <div class="bottom-container">
     <div class="row">
       <div class="col">
-        <a href="#" style="color:white" class="btn">S'enregistrer</a>
+        <a href="Register.php" style="color:white" class="btn">S'enregistrer</a>
       </div>
       <div class="col">
-        <a href="#" style="color:white" class="btn">Mot de passe oubliÃ©e ?</a>
+        <a href="#" style="color:white" class="btn">Mot de passe oublier ?</a>
       </div>
     </div>
   </div>

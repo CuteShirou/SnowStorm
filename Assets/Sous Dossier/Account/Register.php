@@ -4,29 +4,43 @@ if (isset($_POST["submit"])) {
     } else {
         if (empty($_POST["mdp"])) {
         } else {
-            if (empty($_POST["pseudo"])) {
+            if (empty($_POST["mdp2"]) or $_POST["mdp"]!=$_POST["mdp2"]){
             } else {
-                $Mail = htmlentities($_POST["mail"], ENT_QUOTES, "UTF-8");
-                $MDP = htmlentities($_POST["mdp"], ENT_QUOTES, "UTF-8");
-                $Pseudo = htmlentities($_POST["pseudo"], ENT_QUOTES, "UTF-8");
+              if (empty($_POST["nom"])) {
+              } else {
+                if (empty($_POST["prenom"])) {
+                  } else {
+                    if (empty($_POST["dateNaissance"])) {
+                      } else {
+                        $Mail = htmlentities($_POST["mail"], ENT_QUOTES, "UTF-8");
+                        $MDP = htmlentities($_POST["mdp"], ENT_QUOTES, "UTF-8");
+                        $Nom = htmlentities($_POST["nom"], ENT_QUOTES, "UTF-8");
+                        $Prenom = htmlentities($_POST["prenom"], ENT_QUOTES, "UTF-8");
+                        $Naissance = htmlentities($_POST["dateNaissance"], ENT_QUOTES, "UTF-8");
 
-                include("php/tlt.php");
+                        include('BDDConnection.php');
 
-                $query = $pdo->prepare("INSERT INTO `Users`(`ID`, `Username`, `Email`, `Password`, `Admin`) VALUES (NULL,:pseudo,:mail,:mdp,false)");
-                $query->bindParam(':pseudo',$Pseudo , PDO::PARAM_STR);
-                $query->bindParam(':mail',$Mail , PDO::PARAM_STR);
-                $query->bindParam(':mdp',$MDP , PDO::PARAM_STR);
-                $query->execute();
+                        $query = $connexion->prepare("INSERT INTO `USERS`(`id`, `nom`, `prenom`, `mail`, `mdp`, `date_de_naissance`) VALUES (NULL,:nom,:prenom,:mail,:mdp,:dateNaissance)");
+                        $query->bindParam(':mail',$Mail , PDO::PARAM_STR);
+                        $query->bindParam(':mdp',$MDP , PDO::PARAM_STR);
+                        $query->bindParam(':nom',$Nom , PDO::PARAM_STR);
+                        $query->bindParam(':prenom',$Prenom , PDO::PARAM_STR);
+                        $query->bindParam(':dateNaissance',$Naissance , PDO::PARAM_STR);
+                        $query->execute();
 
-                $query = $pdo->prepare("SELECT ID FROM Users WHERE Users.Email=:mail AND Users.Password=:mdp");
-                $query->bindParam(':mail',$Mail , PDO::PARAM_STR);
-                $query->bindParam(':mdp',$MDP , PDO::PARAM_STR);
-                $query->execute();
-                if ($query->rowCount() == 1) {
-                    $_SESSION['ID'] = $query->fetchColumn();
-                    header('Location: quiz.php');
+                        $query2 = $connexion->prepare("SELECT id FROM USERS WHERE USERS.mail=:mail AND USERS.mdp =:mdp");
+                        $query2->bindParam(':mail',$Mail , PDO::PARAM_STR);
+                        $query2->bindParam(':mdp',$MDP , PDO::PARAM_STR);
+                        $query2->execute();
+
+                        if ($query2->rowCount() == 1) {
+                            $_SESSION['id'] = $query2->fetchColumn();
+                            header('Location: ../../../Index.html');
+                          } 
+                        }
+                    }
                 }
-            }
+            } 
         }
     }
 }
@@ -47,41 +61,41 @@ if (isset($_POST["submit"])) {
 </head>
 
 <body>
-  <form action="Register.php">
+  <form method="post" action="Register.php">
     <div class="container-register">
       <h1>S'enregrister</h1>
-      <p>Pour crÃ©er un compte veuillez complÃ©ter le formulaire ci-dessous.</p>
+      <p>Pour creer un compte veuillez completer le formulaire ci-dessous.</p>
       <hr>
 
       <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Entrer Email" name="email" id="email" required>
+      <input type="text" placeholder="Entrer Email" name="mail" id="email" required>
 
       <label for="psw"><b>Mot de passe</b></label>
-      <input type="password" placeholder="Entrer mot de passe" name="psw" id="psw" required>
+      <input type="password" placeholder="Entrer mot de passe" name="mdp" id="psw" required>
 
-      <label for="psw-repeat"><b>RÃ©pÃ©ter le mot de passe</b></label>
-      <input type="password" placeholder="RÃ©pÃ©ter mot de passe" name="psw-repeat" id="psw-repeat" required>
+      <label for="psw-repeat"><b>Repeter le mot de passe</b></label>
+      <input type="password" placeholder="Repeter mot de passe" name="mdp2" id="psw-repeat" required>
       <hr>
 
       <label for="Nom"><b>Nom</b></label>
       <input type="text" placeholder="Entrer Nom" name="nom" id="nom" required>
       <hr>
 
-      <label for="PrÃ©nom"><b>PrÃ©nom</b></label>
-      <input type="text" placeholder="Entrer PrÃ©nom" name="prenom" id="prenom" required>
+      <label for="Prenom"><b>Prenom</b></label>
+      <input type="text" placeholder="Entrer Prenom" name="prenom" id="prenom" required>
       <hr>
       
-      <label for="PrÃ©nom"><b>Date de naissance</b></label>
-      <input type="date" placeholder="Entrer Date de naissance" name="date" id="date" min="01/01/1900" max="" required>
+      <label for="DDN"><b>Date de naissance</b></label>
+      <input type="date" placeholder="Entrer Date de naissance" name="dateNaissance" id="date" min="01/01/1900" max="" required>
       <hr>
 
-      <p>Si vous crÃ©ez un compte vous Ãªtes alors en accord avec les <a href="#">conditions d'utilisation</a>.</p>
-      <button type="submit" class="registerbtn">S'enregistrer</button>
+      <p>Si vous creez un compte vous etes alors en accord avec les <a href="#">conditions d'utilisation</a>.</p>
+      <button type="submit" name="submit" class="registerbtn">S'enregistrer</button>
     </div>
 
     <div class="container signin">
-      <p>Vous avez dÃ©jà un compte ? <a href="#">Se connecter</a>.</p>
+      <p>Vous avez deja  un compte ? <a href="Login.php">Se connecter</a>.</p>
     </div>
   </form>
 </body>
-</html> 
+</html>
