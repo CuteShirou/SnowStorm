@@ -140,142 +140,142 @@
                 <tr>
                     <td>INFORMATIONS GENERALES</td>
                     <td>Désignation</td>
-                    <td><?= $Désignation ?></td>
+                    <td><?= $Designation ?></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>Marque</td>
-                    <td><?= $ ?></td>
+                    <td><?= $Marque ?></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>Modèle</td>
-                    <td><?= $ ?> 3</td>
+                    <td><?= $Modele ?></td>
                 </tr>
                 <tr>
                     <td>FORMAT DU CLAVIER/td>
                     <td>Format</td>
-                    <td>Content 4</td>
+                    <td><?= $Format ?></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>Compact</td>
-                    <td>Content 5</td>
+                    <td><?= $Compact ?></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>TKL</td>
-                    <td>Content 6</td>
+                    <td><?= $TKL ?></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>Norme du clavier</td>
-                    <td>Content 7</td>
+                    <td><?= $NormeDuClavier ?></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>Localisation</td>
-                    <td>Content 8</td>
+                    <td><?= $Localisation ?></td>
                 </tr>
                 <tr>
                     <td>INTERFACE</td>
                     <td>Sans-fil</td>
-                    <td>Content 9</td>
+                    <td><?= $SansFil ?></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>Interface avec l'ordinateur</td>
-                    <td>Content 10</td>
+                    <td><?= $Interface ?></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>Technologie de connexion du clavier</td>
-                    <td>Content 11</td>
+                    <td><?= $connexion ?></td>
                 </tr>
                 <tr>
                     <td>ERGONOMIE</td>
                     <td>Type de touches</td>
-                    <td>Content 12</td>
+                    <td><?= $touches ?></td>
                 </tr>
                 <tr>
                     <td</td>
                     <td>Type de switch</td>
-                    <td>Content 13</td>
+                    <td><?= $switch ?></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>Clavier rétroéclairé</td>
-                    <td>Content 14</td>
+                    <td><?= $retroeclaire ?></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>Rétroéclairage RGB</td>
-                    <td>Content 15</td>
+                    <td><?= $RGB ?></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>Touches macro</td>
-                    <td>Content 16</td>
+                    <td><?= $macro ?></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>Touches multimédia</td>
-                    <td>Content 17</td>
+                    <td><?= $multimedia ?></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>Pavé numérique</td>
-                    <td>Content 18</td>
+                    <td><?= $PaveNumerique ?></td>
                 </tr>
                 <tr>
                     <td>CARACTERISTIQUES PHYSIQUES</td>
                     <td>Couleur</td>
-                    <td>Content 19</td>
+                    <td><?= $Couleur ?></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>Largeur</td>
-                    <td>Content 20</td>
+                    <td><?= $Largeur ?></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>Hauteur</td>
-                    <td>Content 21</td>
+                    <td><?= $Hauteur ?></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>Profondeur</td>
-                    <td>Content 22</td>
+                    <td><?= $Profondeur ?></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>Poids</td>
-                    <td>Content 23</td>
+                    <td><?= $Poids ?></td>
                 </tr>
                 <tr>
                     <td>ALIMENTATION</td>
                     <td>Type d'alimentation</td>
-                    <td>Content 24</td>
+                    <td><?= $alimentation ?></td>
                 </tr>
                 <tr>
                     <td>COMPATIBILITE</td>
                     <td>OS supporté(s)</td>
-                    <td>Content 25</td>
+                    <td><?= $OS ?></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>Utilisation</td>
-                    <td>Content 26</td>
+                    <td><?= $Utilisation ?></td>
                 </tr>
                 <tr>
                     <td>GARANTIES</td>
                     <td>Garantie commerciale</td>
-                    <td>Content 27</td>
+                    <td><?= $GarantieCommerciale ?></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>Garantie légale</td>
-                    <td>Content 28</td>
+                    <td><?= $GarantieLegale ?></td>
                 </tr>
                 <tbody>
             </table>
