@@ -1,31 +1,37 @@
-<!DOCTYPE html>
-<html lang="fr">
+<php
 
+?>
+
+
+<!DOCTYPE html>
 <!-- Inclusion des feuilles de style et des polices -->
-<link rel="stylesheet" type="text/css" href="../../CSS/builder.css">
+<html lang="fr">
+<link rel="stylesheet" type="text/css" href="Assets/CSS/Style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
 
 <head>
     <!-- Métadonnées de la page -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Custom Builder</title>
+    <title>Snowstorm - Builder</title>
 </head>
 
 <header>
     <!-- En-tête du site avec le logo et la navigation -->
     <div>
-        <img src="../../IMG/image 29.png" alt="Logo du site" class="logo">
+        <img src="Assets/IMG/image 29.png" alt="Logo du site" class="logo">
     </div>
     <nav>
         <!-- Barre de navigation avec des liens vers différentes sections -->
         <ul class="nav-bar">
-            <li><a href="../../../Index.html" class="brand">SNOWSTORM.GG</a></li>
-            <li><img src="../../IMG/118089 1.png" class="opt"></li> <!-- Modification : balise incorrecte fermée -->
-            <li><img src="../../IMG/profil 1.png" class="opt"></li> <!-- Modification : balise incorrecte fermée -->
-            <li><img src="../../IMG/image 31.png" class="opt"></li> <!-- Modification : balise incorrecte fermée -->
+            <li><a href="index.html" class="brand">SNOWSTORM.GG</a></li>
+            <li><a href="Panier.html"><img src="Assets/IMG/118089 1.png" class="opt"></a></li>
+            <li><a href="Assets/Sous Dossier/Account/Account.php"><img src="Assets/IMG/profil 1.png" class="opt"></a></li>
+            <li><img src="Assets/IMG/image 31.png" class="opt"></a></li>
         </ul>
         <ul class="nav-bar">
             <li><a href="Boutique.html" class="nav-but">NOS PRODUITS</a></li>
@@ -132,157 +138,205 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td>Content 1</td>
-                    <td>Content 1</td>
-                    <td>Content 1</td>
+                    <td>INFORMATIONS GENERALES</td>
+                    <td>Désignation</td>
+                    <td><?= $Désignation ?></td>
                 </tr>
                 <tr>
-                    <td>Content 2</td>
-                    <td>Content 2</td>
-                    <td>Content 2</td>
+                    <td></td>
+                    <td>Marque</td>
+                    <td><?= $ ?></td>
                 </tr>
                 <tr>
-                    <td>Content 3</td>
-                    <td>Content 3</td>
-                    <td>Content 3</td>
+                    <td></td>
+                    <td>Modèle</td>
+                    <td><?= $ ?> 3</td>
                 </tr>
                 <tr>
+                    <td>FORMAT DU CLAVIER/td>
+                    <td>Format</td>
                     <td>Content 4</td>
-                    <td>Content 4</td>
-                    <td>Content 4</td>
                 </tr>
                 <tr>
-                    <td>Content 5</td>
-                    <td>Content 5</td>
+                    <td></td>
+                    <td>Compact</td>
                     <td>Content 5</td>
                 </tr>
                 <tr>
+                    <td></td>
+                    <td>TKL</td>
                     <td>Content 6</td>
-                    <td>Content 6</td>
-                    <td>Content 6</td>
                 </tr>
                 <tr>
-                    <td>Content 7</td>
-                    <td>Content 7</td>
+                    <td></td>
+                    <td>Norme du clavier</td>
                     <td>Content 7</td>
                 </tr>
                 <tr>
+                    <td></td>
+                    <td>Localisation</td>
                     <td>Content 8</td>
-                    <td>Content 8</td>
-                    <td>Content 8</td>
                 </tr>
                 <tr>
-                    <td>Content 9</td>
-                    <td>Content 9</td>
+                    <td>INTERFACE</td>
+                    <td>Sans-fil</td>
                     <td>Content 9</td>
                 </tr>
                 <tr>
+                    <td></td>
+                    <td>Interface avec l'ordinateur</td>
                     <td>Content 10</td>
-                    <td>Content 10</td>
-                    <td>Content 10</td>
                 </tr>
                 <tr>
-                    <td>Content 11</td>
-                    <td>Content 11</td>
+                    <td></td>
+                    <td>Technologie de connexion du clavier</td>
                     <td>Content 11</td>
                 </tr>
                 <tr>
+                    <td>ERGONOMIE</td>
+                    <td>Type de touches</td>
                     <td>Content 12</td>
-                    <td>Content 12</td>
-                    <td>Content 12</td>
                 </tr>
                 <tr>
-                    <td>Content 13</td>
-                    <td>Content 13</td>
+                    <td</td>
+                    <td>Type de switch</td>
                     <td>Content 13</td>
                 </tr>
                 <tr>
+                    <td></td>
+                    <td>Clavier rétroéclairé</td>
                     <td>Content 14</td>
-                    <td>Content 14</td>
-                    <td>Content 14</td>
                 </tr>
                 <tr>
-                    <td>Content 15</td>
-                    <td>Content 15</td>
+                    <td></td>
+                    <td>Rétroéclairage RGB</td>
                     <td>Content 15</td>
                 </tr>
                 <tr>
+                    <td></td>
+                    <td>Touches macro</td>
                     <td>Content 16</td>
-                    <td>Content 16</td>
-                    <td>Content 16</td>
                 </tr>
                 <tr>
-                    <td>Content 17</td>
-                    <td>Content 17</td>
+                    <td></td>
+                    <td>Touches multimédia</td>
                     <td>Content 17</td>
                 </tr>
                 <tr>
+                    <td></td>
+                    <td>Pavé numérique</td>
                     <td>Content 18</td>
-                    <td>Content 18</td>
-                    <td>Content 18</td>
                 </tr>
                 <tr>
-                    <td>Content 19</td>
-                    <td>Content 19</td>
+                    <td>CARACTERISTIQUES PHYSIQUES</td>
+                    <td>Couleur</td>
                     <td>Content 19</td>
                 </tr>
                 <tr>
+                    <td></td>
+                    <td>Largeur</td>
                     <td>Content 20</td>
-                    <td>Content 20</td>
-                    <td>Content 20</td>
                 </tr>
                 <tr>
-                    <td>Content 21</td>
-                    <td>Content 21</td>
+                    <td></td>
+                    <td>Hauteur</td>
                     <td>Content 21</td>
                 </tr>
                 <tr>
+                    <td></td>
+                    <td>Profondeur</td>
                     <td>Content 22</td>
-                    <td>Content 22</td>
-                    <td>Content 22</td>
                 </tr>
                 <tr>
-                    <td>Content 23</td>
-                    <td>Content 23</td>
+                    <td></td>
+                    <td>Poids</td>
                     <td>Content 23</td>
                 </tr>
                 <tr>
+                    <td>ALIMENTATION</td>
+                    <td>Type d'alimentation</td>
                     <td>Content 24</td>
-                    <td>Content 24</td>
-                    <td>Content 24</td>
                 </tr>
                 <tr>
-                    <td>Content 25</td>
-                    <td>Content 25</td>
+                    <td>COMPATIBILITE</td>
+                    <td>OS supporté(s)</td>
                     <td>Content 25</td>
                 </tr>
                 <tr>
+                    <td></td>
+                    <td>Utilisation</td>
                     <td>Content 26</td>
-                    <td>Content 26</td>
-                    <td>Content 26</td>
                 </tr>
                 <tr>
-                    <td>Content 27</td>
-                    <td>Content 27</td>
+                    <td>GARANTIES</td>
+                    <td>Garantie commerciale</td>
                     <td>Content 27</td>
                 </tr>
                 <tr>
+                    <td></td>
+                    <td>Garantie légale</td>
                     <td>Content 28</td>
-                    <td>Content 28</td>
-                    <td>Content 28</td>
-                </tr>
-                <tr>
-                    <td>Content 29</td>
-                    <td>Content 29</td>
-                    <td>Content 29</td>
-                </tr>
-                <tr>
-                    <td>Content 30</td>
-                    <td>Content 30</td>
-                    <td>Content 30</td>
                 </tr>
                 <tbody>
             </table>
+        </div>
+    </div>
+    <div class="avisDiv">
+        <div class="avisBlock">
+            <div class="writter">
+                <img class="profiles" src="../../IMG/profil 1-5.png" alt="ProfilUwU">
+                <p>Jean-Michel Jarre</p>
+            </div>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <div class="stars">
+                <img src="../../IMG/Star_4.svg" alt="fullstar">
+                <img src="../../IMG/Star_4.svg" alt="fullstar">
+                <img src="../../IMG/Star_4.svg" alt="fullstar">
+                <img src="../../IMG/Star_4.svg" alt="fullstar">
+                <img src="../../IMG/Star_5.svg" alt="fullstar">
+            </div>
+        </div>
+        <div class="avisBlock">
+            <div class="writter">
+                <img class="profiles" src="../../IMG/profil 1-5.png" alt="ProfilUwU">
+                <p>Jean-Marie Bigard</p>
+            </div>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <div class="stars">
+                <img src="../../IMG/Star_4.svg" alt="fullstar">
+                <img src="../../IMG/Star_4.svg" alt="fullstar">
+                <img src="../../IMG/Star_4.svg" alt="fullstar">
+                <img src="../../IMG/Star_4.svg" alt="fullstar">
+                <img src="../../IMG/Star_5.svg" alt="fullstar">
+            </div>
+        </div>
+        <div class="avisBlock">
+            <div class="writter">
+                <img class="profiles" src="../../IMG/profil 1-5.png" alt="ProfilUwU">
+                <p>Peter Laposte</p>
+            </div>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <div class="stars">
+                <img src="../../IMG/Star_4.svg" alt="fullstar">
+                <img src="../../IMG/Star_4.svg" alt="fullstar">
+                <img src="../../IMG/Star_4.svg" alt="fullstar">
+                <img src="../../IMG/Star_4.svg" alt="fullstar">
+                <img src="../../IMG/Star_5.svg" alt="fullstar">
+            </div>
+        </div>
+        <div class="avisBlock">
+            <div class="writter">
+                <img class="profiles" src="../../IMG/profil 1-5.png" alt="ProfilUwU">
+                <p>Marie Boite</p>
+            </div>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <div class="stars">
+                <img src="../../IMG/Star_4.svg" alt="fullstar">
+                <img src="../../IMG/Star_4.svg" alt="fullstar">
+                <img src="../../IMG/Star_4.svg" alt="fullstar">
+                <img src="../../IMG/Star_4.svg" alt="fullstar">
+                <img src="../../IMG/Star_5.svg" alt="fullstar">
+            </div>
         </div>
     </div>
 </body>

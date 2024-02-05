@@ -1,17 +1,23 @@
-<!DOCTYPE html>
-<html lang="fr">
+<php
 
+?>
+
+
+<!DOCTYPE html>
 <!-- Inclusion des feuilles de style et des polices -->
+<html lang="fr">
 <link rel="stylesheet" type="text/css" href="../../CSS/builder.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
 
 <head>
     <!-- Métadonnées de la page -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Custom Builder</title>
+    <title>Snowstorm - Builder</title>
 </head>
 
 <header>
@@ -22,10 +28,10 @@
     <nav>
         <!-- Barre de navigation avec des liens vers différentes sections -->
         <ul class="nav-bar">
-            <li><a href="../../../Index.html" class="brand">SNOWSTORM.GG</a></li>
-            <li><img src="../../IMG/118089 1.png" class="opt"></li> <!-- Modification : balise incorrecte fermée -->
-            <li><img src="../../IMG/profil 1.png" class="opt"></li> <!-- Modification : balise incorrecte fermée -->
-            <li><img src="../../IMG/image 31.png" class="opt"></li> <!-- Modification : balise incorrecte fermée -->
+            <li><a href="../../../index.html" class="brand">SNOWSTORM.GG</a></li>
+            <li><a href="../../../Panier.html"><img src="../../IMG/118089 1.png" class="opt"></a></li>
+            <li><a href="../Account/Account.php"><img src="../../IMG/profil 1.png" class="opt"></a></li>
+            <li><img src="../../IMG/image 31.png" class="opt"></a></li>
         </ul>
         <ul class="nav-bar">
             <li><a href="Boutique.html" class="nav-but">NOS PRODUITS</a></li>
@@ -82,30 +88,35 @@
     <!-- Section pour la sélection de la couleur de backplate avec des boutons radio -->
     <div class="backplate">
         <p>Couleur de backplate :</p>
-            <label class="form-control">
-                <input type="radio" name="radio" />
-                Nom de la couleur + prix si frais supplémentaires
-            </label>
-            <label class="form-control">
-                <input type="radio" name="radio" />
-                Nom de la couleur + prix si frais supplémentaires
-            </label>
-            <label class="form-control">
-                <input type="radio" name="radio" />
-                Nom de la couleur + prix si frais supplémentaires
-            </label>
-            <label class="form-control">
-                <input type="radio" name="radio" />
-                Nom de la couleur + prix si frais supplémentaires
-            </label>
-            <label class="form-control">
-                <input type="radio" name="radio" />
-                Nom de la couleur + prix si frais supplémentaires
-            </label>
-            <label class="form-control">
-                <input type="radio" name="radio" />
-                Nom de la couleur + prix si frais supplémentaires
-            </label>
+        <div class="backSuiv">
+            <div class="colorChoice">
+                <label class="form-control">
+                    <input type="radio" name="radio" />
+                    Nom de la couleur + prix si frais supplémentaires
+                </label>
+                <label class="form-control">
+                    <input type="radio" name="radio" />
+                    Nom de la couleur + prix si frais supplémentaires
+                </label>
+                <label class="form-control">
+                    <input type="radio" name="radio" />
+                    Nom de la couleur + prix si frais supplémentaires
+                </label>
+                <label class="form-control">
+                    <input type="radio" name="radio" />
+                    Nom de la couleur + prix si frais supplémentaires
+                </label>
+                <label class="form-control">
+                    <input type="radio" name="radio" />
+                    Nom de la couleur + prix si frais supplémentaires
+                </label>
+                <label class="form-control">
+                    <input type="radio" name="radio" />
+                    Nom de la couleur + prix si frais supplémentaires
+                </label>
+            </div>
+            <a href="" class="suivant">Suivant</a>
+        </div>
     </div>
     <h1 id="productpres">Présentation Produit</h1>
     <div class="present">
@@ -132,17 +143,17 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td>Content 1</td>
+                    <td>information general</td>
                     <td>Désignation</td>
-                    <td>Content 1</td>
+                    <td>$Désignation</td>
                 </tr>
                 <tr>
-                    <td>Content 2</td>
+                    <td></td>
                     <td>Marque</td>
                     <td>Content 2</td>
                 </tr>
                 <tr>
-                    <td>Content 3</td>
+                    <td></td>
                     <td>Modèle</td>
                     <td>Content 3</td>
                 </tr>

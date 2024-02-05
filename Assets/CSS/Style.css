@@ -94,6 +94,11 @@ ul{
     position: relative;
 }
 
+.opt:hover {
+    transform: scale(1.1,1.1);
+    transition: transform 1s;
+}
+
 .nav-but {
     white-space: nowrap;
     font-size: 3.3vh;

@@ -510,3 +510,19 @@ h2{
     justify-content: center;
     display: flex;
 }
+
+.backSuiv {
+    display: flex;
+}
+
+.suivant {
+    text-decoration: none;
+    color: black;
+    font-family: OpenSans;
+    font-size: 80%;
+    padding: 1.5vh;
+    background-color: #c4c4c4;
+    margin: auto 0;
+    border: solid black 0.1vw;
+    margin-left: 60vw;
+}
