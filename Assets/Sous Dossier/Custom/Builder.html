@@ -1,8 +1,3 @@
-<php
-
-?>
-
-
 <!DOCTYPE html>
 <!-- Inclusion des feuilles de style et des polices -->
 <html lang="fr">
@@ -11,6 +6,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
 <script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="../../JS/builder.js"></script>
 
 
 <head>
@@ -46,79 +42,118 @@
 
 <body>
     <section>
-        <!-- Corps de la page avec le titre "Référence modèle" et différentes sections pour le processus de personnalisation -->
-        <h3>Référence modèle</h3>
-        <div class="steps">
-            <!-- Section pour les étapes du processus -->
-            <p class="paraSelect">Étape 1 : Choix de la base</p>
-            <div class="uncomplete">
-                <!-- Bloc indiquant les étapes incomplètes -->
-                <a href="" class="para">2</a>
-                <a href="" class="para">3</a>
-                <a href="" class="para">4</a>
+        <div class="step step-1" data-step="1">
+            <!-- Corps de la page avec le titre "Référence modèle" et différentes sections pour le processus de personnalisation -->
+            <h3>Référence modèle</h3>
+            <div class="steps">
+                <!-- Section pour les étapes du processus -->
+                <p class="paraSelect">Étape 1 : Choix de la base</p>
+                <div class="uncomplete">
+                    <!-- Bloc indiquant les étapes incomplètes -->
+                    <a href="" class="para">2</a>
+                    <a href="" class="para">3</a>
+                    <a href="" class="para">4</a>
+                </div>
+                <div class="saver">
+                    <!-- Bouton pour sauvegarder la configuration -->
+                    <a href="" class="save">Sauvegarder ma configuration</a>
+                </div>
             </div>
-            <div class="saver">
-                <!-- Bouton pour sauvegarder la configuration -->
-                <a href="" class="save">Sauvegarder ma configuration</a>
+            <div class="picBuilder">
+                <!-- Section pour l'affichage de l'image de prévisualisation -->
+                <img src="../../IMG/image 10.png" alt="Preview" class="picItself">
             </div>
-        </div>
-        <div class="picBuilder">
-            <!-- Section pour l'affichage de l'image de prévisualisation -->
-            <img src="../../IMG/image 10.png" alt="Preview" class="picItself">
-        </div>
-        <div class="switch">
-            <!-- Section pour le choix du switch avec une liste déroulante -->
-            <p>Choix du switch</p>
-            <div class="dropdown">
-                <button class="dropbtn">Dropdown</button>
-                <div class="dropdown-content">
-                    <!-- Options de la liste déroulante pour les types de switch -->
-                    <a href="#">Cherry Red</a>
-                    <a href="#">Cherry Brown</a>
-                    <a href="#">Cherry Blue</a>
-                    <a href="#">Gateron Red</a>
-                    <a href="#">Gateron Brown</a>
-                    <a href="#">Gateron Blue</a>
-                    <a href="#">Gateron Green</a>
-                    <a href="#">Gateron Yellow</a>
-                    <a href="#">Gateron Black</a>
-                    <a href="#">Gateron Clear</a>
+            <div class="switch">
+                <!-- Section pour le choix du switch avec une liste déroulante -->
+                <p>Choix du switch</p>
+                <div class="dropdown">
+                    <button class="dropbtn">Dropdown</button>
+                    <div class="dropdown-content">
+                        <!-- Options de la liste déroulante pour les types de switch -->
+                        <a href="#">Cherry Red</a>
+                        <a href="#">Cherry Brown</a>
+                        <a href="#">Cherry Blue</a>
+                        <a href="#">Gateron Red</a>
+                        <a href="#">Gateron Brown</a>
+                        <a href="#">Gateron Blue</a>
+                        <a href="#">Gateron Green</a>
+                        <a href="#">Gateron Yellow</a>
+                        <a href="#">Gateron Black</a>
+                        <a href="#">Gateron Clear</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Section pour la sélection de la couleur de backplate avec des boutons radio -->
+            <div class="backplate">
+                <p>Couleur de backplate :</p>
+                <div class="backSuiv">
+                    <div class="colorChoice">
+                        <label class="form-control">
+                            <input type="radio" name="radio" />
+                            Nom de la couleur + prix si frais supplémentaires
+                        </label>
+                        <label class="form-control">
+                            <input type="radio" name="radio" />
+                            Nom de la couleur + prix si frais supplémentaires
+                        </label>
+                        <label class="form-control">
+                            <input type="radio" name="radio" />
+                            Nom de la couleur + prix si frais supplémentaires
+                        </label>
+                        <label class="form-control">
+                            <input type="radio" name="radio" />
+                            Nom de la couleur + prix si frais supplémentaires
+                        </label>
+                        <label class="form-control">
+                            <input type="radio" name="radio" />
+                            Nom de la couleur + prix si frais supplémentaires
+                        </label>
+                        <label class="form-control">
+                            <input type="radio" name="radio" />
+                            Nom de la couleur + prix si frais supplémentaires
+                        </label>
+                    </div>
+                    <a href="" class="suivant">Suivant</a>
                 </div>
             </div>
         </div>
-        <!-- Section pour la sélection de la couleur de backplate avec des boutons radio -->
-        <div class="backplate">
-            <p>Couleur de backplate :</p>
-            <div class="backSuiv">
+        <div class="step step-2" data-step="2">
+            <div class="steps">
+                <!-- Section pour les étapes du processus -->
+                <p class="para">Étape 1 : Choix de la base</p>
+                <div class="complete">
+                    <!-- Bloc indiquant les étapes complétées -->
+                    <a href="" class="para">2</a>
+                    <a href="" class="para">3</a>
+                    <a href="" class="para">4</a>
+                </div>
+                <div class="saver">
+                    <!-- Bouton pour sauvegarder la configuration -->
+                    <a href="" class="save">Sauvegarder ma configuration</a>
+                </div>
+            </div>
+            <!-- Section pour le choix de la couleur de la base avec des boutons radio -->
+            <div class="baseColor">
+                <p>Choix de la couleur de la base :</p>
                 <div class="colorChoice">
                     <label class="form-control">
-                        <input type="radio" name="radio" />
-                        Nom de la couleur + prix si frais supplémentaires
+                        <input type="radio" name="baseRadio" />
+                        Couleur 1
                     </label>
                     <label class="form-control">
-                        <input type="radio" name="radio" />
-                        Nom de la couleur + prix si frais supplémentaires
+                        <input type="radio" name="baseRadio" />
+                        Couleur 2
                     </label>
                     <label class="form-control">
-                        <input type="radio" name="radio" />
-                        Nom de la couleur + prix si frais supplémentaires
+                        <input type="radio" name="baseRadio" />
+                        Couleur 3
                     </label>
-                    <label class="form-control">
-                        <input type="radio" name="radio" />
-                        Nom de la couleur + prix si frais supplémentaires
-                    </label>
-                    <label class="form-control">
-                        <input type="radio" name="radio" />
-                        Nom de la couleur + prix si frais supplémentaires
-                    </label>
-                    <label class="form-control">
-                        <input type="radio" name="radio" />
-                        Nom de la couleur + prix si frais supplémentaires
-                    </label>
+                    <!-- Ajoutez autant d'options que nécessaire -->
                 </div>
                 <a href="" class="suivant">Suivant</a>
             </div>
         </div>
+
         <h1 id="productpres">Présentation Produit</h1>
         <div class="present">
             <div class="lineone">

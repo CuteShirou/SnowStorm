@@ -17,11 +17,10 @@ if (isset($_POST["connect"])){
 
             if ($query->rowCount() == 1) {
                 $_SESSION['id'] = $query->fetchColumn();
-                header('Location: ../../../Index.html');
-            } 
+                header('Location: Account.php');
+            }
         }
     }
-} else {
 }
 ?>
 

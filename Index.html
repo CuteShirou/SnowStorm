@@ -7,7 +7,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 
-
 <head>
     <!-- Métadonnées de la page -->
     <meta charset="UTF-8">
@@ -25,7 +24,7 @@
         <ul class="nav-bar">
             <li><a href="index.html" class="brand">SNOWSTORM.GG</a></li>
             <li><a href="Panier.html"><img src="Assets/IMG/118089 1.png" class="opt"></a></li>
-            <li><a href="Assets/Sous Dossier/Account/Account.php"><img src="Assets/IMG/profil 1.png" class="opt"></a></li>
+            <li><a href="Assets/Sous Dossier/Account/Login.php"><img src="Assets/IMG/profil 1.png" class="opt"></a></li>
             <li><img src="Assets/IMG/image 31.png" class="opt"></a></li>
         </ul>
         <ul class="nav-bar">
@@ -48,17 +47,18 @@
             <span id="slide-2"></span>
             <span id="slide-3"></span>
             <div class="image-container">
-              <img src="Assets/IMG/Rectangle 7.png" class="slide" width="1000" height="600" />
-              <img src="Assets/IMG/exemple3.jpg" class="slide" width="1000" height="600" />
-              <img src="Assets/IMG/exemple2.jpg" class="slide" width="1000" height="600" />
+              <img src="Assets/IMG/Rectangle 7.png" class="slide" width="1000" height="600"/>
+              <img src="Assets/IMG/exemple3.jpg" class="slide" width="1000" height="600"/>
+              <img src="Assets/IMG/exemple2.jpg" class="slide" width="1000" height="600"/>
             </div>
             <div class="buttons">
-              <a href="#slide-1"></a>
-              <a href="#slide-2"></a>
-              <a href="#slide-3"></a>
+              <a onclick="currentSlide(1)"></a>
+              <a onclick="currentSlide(2)"></a>
+              <a onclick="currentSlide(3)"></a>
             </div>
         </div>
     </div>
+      
     <div class="part2">
         <!-- Section part2 avec des paragraphes et des blocs d'images -->
         <p>NOS MEILLEURS VENTES</p>
@@ -143,3 +143,4 @@
         </div>
     </ul>
 </footer>
+<script src="Assets/JS/Index.js"></script>

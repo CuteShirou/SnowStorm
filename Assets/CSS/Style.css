@@ -2,6 +2,7 @@
 * {
     font-size: 30px;
     font-family: "Bebas Neue";
+    .mySlides {display: none}
 }
 
 @font-face {
@@ -143,23 +144,14 @@ body {
     overflow: hidden;
 }
 
-#slide-1:target ~ .image-container {
-    left: 0px;
-}
-
-#slide-2:target ~ .image-container {
-    left: -1000px;
-}
-
-#slide-3:target ~ .image-container {
-    left: -2000px;
-}
 
 .slide {
     float: left;
     margin: 0px;
     padding: 0px;
     position: relative;
+    width: 1000px;
+    height: 600px;
 }
 
 .image-container {
@@ -167,10 +159,7 @@ body {
     height: 600px;
     clear: both;
     position: relative;
-    -webkit-transition: left 2s;
-    -moz-transition: left 2s;
-    -o-transition: left 2s;
-    transition: left 2s;
+    transition: transform 0.6s ease-in-out; /* Use transform for smoother sliding */
 }
 
 .buttons {
@@ -183,17 +172,21 @@ body {
     display: inline-block;
     height: 5px;
     width: 110px;
-    background-color: #000000;
+    background-color: #000000;*
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
 
 }
 
-.buttons a:active {
+.buttons a.active {
     background-color: #F5EDED;
 }
 
 .buttons a:hover {
     background-color: #F5EDED;
 }
+
 
     /* part 2 */
 

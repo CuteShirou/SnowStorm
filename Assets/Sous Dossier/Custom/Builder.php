@@ -1,37 +1,76 @@
-<php
+<?php
+
+$serveur = "mysql:host=mysql-sitewebpro.alwaysdata.net;dbname=sitewebpro_snowstorm";
+$utilisateur = "345536";
+$motDePasse = "ToutEstPasBonDansLePHP2024";
+$connexion = new PDO($serveur,$utilisateur,$motDePasse);
+$connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+$sql = "SELECT * FROM `KEYBOARDS` WHERE 1";
+$result = $connexion->query($sql);
+
+$row = $result->fetch(PDO::FETCH_ASSOC);
+
+$Designation = $row['designation'];
+$Marque = $row['marque'];
+$Modele = $row['modele'];
+$Format = $row['format'];
+$Compact = $row['compact'];
+$TKL = $row['tkl'];
+$NormeDuClavier = $row['norme'];
+$Localisation = $row['localisation'];
+$SansFil = $row['sansfil'];
+$Interface = $row['interface_Ordi'];
+$TypeConnexion = $row['techno_Connexion_Clavier'];
+$touches = $row['touches'];
+$switch = $row['switch'];
+$retroeclaire = $row['calvier_Retroeclaire'];
+$RGB = $row['retroeclairage_RGB'];
+$macro = $row['macro'];
+$multimedia = $row['sansmultimediafil'];
+$PaveNumerique = $row['pave_Numerique'];
+$Couleur = $row['couleur'];
+$Largeur = $row['largeur'];
+$Hauteur = $row['hauteur'];
+$Profondeur = $row['profondeur'];
+$Poids = $row['poids'];
+$alimentation = $row['alimentation'];
+$ListOS = $row['OS'];
+$Utilisation = $row['gamer'];
+$GarantieCommerciale = $row['garantie_Commerciale'];
+$GarantieLegale = $row['garantie_Legale'];
 
 ?>
-
 
 <!DOCTYPE html>
 <!-- Inclusion des feuilles de style et des polices -->
 <html lang="fr">
-<link rel="stylesheet" type="text/css" href="Assets/CSS/Style.css">
+<link rel="stylesheet" type="text/css" href="../../CSS/builder.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
 <script src="https://apis.google.com/js/platform.js" async defer></script>
-
+<script src="../../JS/builder.js"></script>
 
 <head>
-    <!-- Métadonnées de la page -->
+    <!-- Metadonnees de la page -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Snowstorm - Builder</title>
 </head>
 
 <header>
-    <!-- En-tête du site avec le logo et la navigation -->
+    <!-- En-tete du site avec le logo et la navigation -->
     <div>
-        <img src="Assets/IMG/image 29.png" alt="Logo du site" class="logo">
+        <img src="../../IMG/image 29.png" alt="Logo du site" class="logo">
     </div>
     <nav>
-        <!-- Barre de navigation avec des liens vers différentes sections -->
+        <!-- Barre de navigation avec des liens vers differentes sections -->
         <ul class="nav-bar">
-            <li><a href="index.html" class="brand">SNOWSTORM.GG</a></li>
-            <li><a href="Panier.html"><img src="Assets/IMG/118089 1.png" class="opt"></a></li>
-            <li><a href="Assets/Sous Dossier/Account/Account.php"><img src="Assets/IMG/profil 1.png" class="opt"></a></li>
-            <li><img src="Assets/IMG/image 31.png" class="opt"></a></li>
+            <li><a href="../../../index.html" class="brand">SNOWSTORM.GG</a></li>
+            <li><a href="../../../Panier.html"><img src="../../IMG/118089 1.png" class="opt"></a></li>
+            <li><a href="../Account/Account.php"><img src="../../IMG/profil 1.png" class="opt"></a></li>
+            <li><img src="../../IMG/image 31.png" class="opt"></a></li>
         </ul>
         <ul class="nav-bar">
             <li><a href="Boutique.html" class="nav-but">NOS PRODUITS</a></li>
@@ -45,13 +84,137 @@
 </header>
 
 <body>
-    <!-- Corps de la page avec le titre "Référence modèle" et différentes sections pour le processus de personnalisation -->
-    <h3>Référence modèle</h3>
+    <section>
+        <div class="step step-1" data-step="1">
+            <!-- Corps de la page avec le titre "Référence modèle" et différentes sections pour le processus de personnalisation -->
+            <h3>Référence modèle</h3>
+            <div class="steps">
+                <!-- Section pour les étapes du processus -->
+                <p class="paraSelect">Étape 1 : Choix de la base</p>
+                <div class="uncomplete">
+                    <!-- Bloc indiquant les étapes incomplètes -->
+                    <a href="" class="para">2</a>
+                    <a href="" class="para">3</a>
+                    <a href="" class="para">4</a>
+                </div>
+                <div class="saver">
+                    <!-- Bouton pour sauvegarder la configuration -->
+                    <a href="" class="save">Sauvegarder ma configuration</a>
+                </div>
+            </div>
+            <div class="picBuilder">
+                <!-- Section pour l'affichage de l'image de prévisualisation -->
+                <img src="../../IMG/image 10.png" alt="Preview" class="picItself">
+            </div>
+            <div class="switch">
+                <!-- Section pour le choix du switch avec une liste déroulante -->
+                <p>Choix du switch</p>
+                <div class="dropdown">
+                    <button class="dropbtn">Dropdown</button>
+                    <div class="dropdown-content">
+                        <!-- Options de la liste déroulante pour les types de switch -->
+                        <a href="#">Cherry Red</a>
+                        <a href="#">Cherry Brown</a>
+                        <a href="#">Cherry Blue</a>
+                        <a href="#">Gateron Red</a>
+                        <a href="#">Gateron Brown</a>
+                        <a href="#">Gateron Blue</a>
+                        <a href="#">Gateron Green</a>
+                        <a href="#">Gateron Yellow</a>
+                        <a href="#">Gateron Black</a>
+                        <a href="#">Gateron Clear</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Section pour la sélection de la couleur de backplate avec des boutons radio -->
+            <div class="backplate">
+                <p>Couleur de backplate :</p>
+                <div class="backSuiv">
+                    <div class="colorChoice">
+                        <label class="form-control">
+                            <input type="radio" name="radio" />
+                            Nom de la couleur + prix si frais supplémentaires
+                        </label>
+                        <label class="form-control">
+                            <input type="radio" name="radio" />
+                            Nom de la couleur + prix si frais supplémentaires
+                        </label>
+                        <label class="form-control">
+                            <input type="radio" name="radio" />
+                            Nom de la couleur + prix si frais supplémentaires
+                        </label>
+                        <label class="form-control">
+                            <input type="radio" name="radio" />
+                            Nom de la couleur + prix si frais supplémentaires
+                        </label>
+                        <label class="form-control">
+                            <input type="radio" name="radio" />
+                            Nom de la couleur + prix si frais supplémentaires
+                        </label>
+                        <label class="form-control">
+                            <input type="radio" name="radio" />
+                            Nom de la couleur + prix si frais supplémentaires
+                        </label>
+                    </div>
+                    <a href="" class="suivant">Suivant</a>
+                </div>
+            </div>
+        </div>
+        <div class="step step-2" data-step="2">
+            <div class="steps">
+                <!-- Section pour les étapes du processus -->
+                <p class="para">Étape 1 : Choix de la base</p>
+                <div class="complete">
+                    <!-- Bloc indiquant les étapes complétées -->
+                    <a href="" class="para">2</a>
+                    <a href="" class="para">3</a>
+                    <a href="" class="para">4</a>
+                </div>
+                <div class="saver">
+                    <!-- Bouton pour sauvegarder la configuration -->
+                    <a href="" class="save">Sauvegarder ma configuration</a>
+                </div>
+            </div>
+            <!-- Section pour le choix de la couleur de la base avec des boutons radio -->
+            <div class="baseColor">
+                <p>Choix de la couleur de la base :</p>
+                <div class="colorChoice">
+                    <label class="form-control">
+                        <input type="radio" name="baseRadio" />
+                        Couleur 1
+                    </label>
+                    <label class="form-control">
+                        <input type="radio" name="baseRadio" />
+                        Couleur 2
+                    </label>
+                    <label class="form-control">
+                        <input type="radio" name="baseRadio" />
+                        Couleur 3
+                    </label>
+                    <!-- Ajoutez autant d'options que nécessaire -->
+                </div>
+                <a href="" class="suivant">Suivant</a>
+            </div>
+        </div>
+
+        <h1 id="productpres">Présentation Produit</h1>
+        <div class="present">
+            <div class="lineone">
+                <img src="../../IMG/Rectangle 128.png" alt="Preview Clavier">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+            </div>
+            <div class="linetwo">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                <img src="../../IMG/Rectangle 129.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section>
     <div class="steps">
-        <!-- Section pour les étapes du processus -->
-        <p class="paraSelect">Étape 1 : Choix de la base</p>
-        <div class="uncomplete">
-            <!-- Bloc indiquant les étapes incomplètes -->
+        <!-- Section pour les etapes du processus -->
+        <p class="para">etape 1 : Choix de la base</p>
+        <div class="complete">
+            <!-- Bloc indiquant les etapes completees -->
             <a href="" class="para">2</a>
             <a href="" class="para">3</a>
             <a href="" class="para">4</a>
@@ -61,72 +224,31 @@
             <a href="" class="save">Sauvegarder ma configuration</a>
         </div>
     </div>
-    <div class="picBuilder">
-        <!-- Section pour l'affichage de l'image de prévisualisation -->
-        <img src="../../IMG/image 10.png" alt="Preview" class="picItself">
-    </div>
-    <div class="switch">
-        <!-- Section pour le choix du switch avec une liste déroulante -->
-        <p>Choix du switch</p>
-        <div class="dropdown">
-            <button class="dropbtn">Dropdown</button>
-            <div class="dropdown-content">
-                <!-- Options de la liste déroulante pour les types de switch -->
-                <a href="#">Cherry Red</a>
-                <a href="#">Cherry Brown</a>
-                <a href="#">Cherry Blue</a>
-                <a href="#">Gateron Red</a>
-                <a href="#">Gateron Brown</a>
-                <a href="#">Gateron Blue</a>
-                <a href="#">Gateron Green</a>
-                <a href="#">Gateron Yellow</a>
-                <a href="#">Gateron Black</a>
-                <a href="#">Gateron Clear</a>
-            </div>
+    <!-- Section pour le choix de la couleur de la base avec des boutons radio -->
+    <div class="baseColor">
+        <p>Choix de la couleur de la base :</p>
+        <div class="colorChoice">
+            <label class="form-control">
+                <input type="radio" name="baseRadio" />
+                Couleur 1
+            </label>
+            <label class="form-control">
+                <input type="radio" name="baseRadio" />
+                Couleur 2
+            </label>
+            <label class="form-control">
+                <input type="radio" name="baseRadio" />
+                Couleur 3
+            </label>
+            <!-- Ajoutez autant d'options que necessaire -->
         </div>
+        <a href="" class="suivant" onclick="goToStep(2)">Suivant</a>
     </div>
-    <!-- Section pour la sélection de la couleur de backplate avec des boutons radio -->
-    <div class="backplate">
-        <p>Couleur de backplate :</p>
-            <label class="form-control">
-                <input type="radio" name="radio" />
-                Nom de la couleur + prix si frais supplémentaires
-            </label>
-            <label class="form-control">
-                <input type="radio" name="radio" />
-                Nom de la couleur + prix si frais supplémentaires
-            </label>
-            <label class="form-control">
-                <input type="radio" name="radio" />
-                Nom de la couleur + prix si frais supplémentaires
-            </label>
-            <label class="form-control">
-                <input type="radio" name="radio" />
-                Nom de la couleur + prix si frais supplémentaires
-            </label>
-            <label class="form-control">
-                <input type="radio" name="radio" />
-                Nom de la couleur + prix si frais supplémentaires
-            </label>
-            <label class="form-control">
-                <input type="radio" name="radio" />
-                Nom de la couleur + prix si frais supplémentaires
-            </label>
-    </div>
-    <h1 id="productpres">Présentation Produit</h1>
-    <div class="present">
-        <div class="lineone">
-            <img src="../../IMG/Rectangle 128.png" alt="Preview Clavier">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
-        </div>
-        <div class="linetwo">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
-            <img src="../../IMG/Rectangle 129.png" alt="">
-        </div>
-    </div>
+    </section>
+
     <h1 class="productFiche">Fiche Produit</h1>
     <div class="ficheProduct">
-        <h2>Responsive Table</h2>
+        <h2>Fiche Produit</h2>
         <div class="table-wrapper">
             <table class="fl-table">
                 <thead>
@@ -139,7 +261,7 @@
                 <tbody>
                 <tr>
                     <td>INFORMATIONS GENERALES</td>
-                    <td>Désignation</td>
+                    <td>Designation</td>
                     <td><?= $Designation ?></td>
                 </tr>
                 <tr>
@@ -149,7 +271,7 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td>Modèle</td>
+                    <td>Modele</td>
                     <td><?= $Modele ?></td>
                 </tr>
                 <tr>
@@ -190,7 +312,7 @@
                 <tr>
                     <td></td>
                     <td>Technologie de connexion du clavier</td>
-                    <td><?= $connexion ?></td>
+                    <td><?= $TypeConnexion ?></td>
                 </tr>
                 <tr>
                     <td>ERGONOMIE</td>
@@ -198,18 +320,18 @@
                     <td><?= $touches ?></td>
                 </tr>
                 <tr>
-                    <td</td>
+                    <td></td>
                     <td>Type de switch</td>
                     <td><?= $switch ?></td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td>Clavier rétroéclairé</td>
+                    <td>Clavier retroeclaire</td>
                     <td><?= $retroeclaire ?></td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td>Rétroéclairage RGB</td>
+                    <td>Retroeclairage RGB</td>
                     <td><?= $RGB ?></td>
                 </tr>
                 <tr>
@@ -219,12 +341,12 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td>Touches multimédia</td>
+                    <td>Touches multimedia</td>
                     <td><?= $multimedia ?></td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td>Pavé numérique</td>
+                    <td>Pave numerique</td>
                     <td><?= $PaveNumerique ?></td>
                 </tr>
                 <tr>
@@ -259,8 +381,8 @@
                 </tr>
                 <tr>
                     <td>COMPATIBILITE</td>
-                    <td>OS supporté(s)</td>
-                    <td><?= $OS ?></td>
+                    <td>OS supporte(s)</td>
+                    <td><?= $ListOS ?></td>
                 </tr>
                 <tr>
                     <td></td>
@@ -274,7 +396,7 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td>Garantie légale</td>
+                    <td>Garantie legale</td>
                     <td><?= $GarantieLegale ?></td>
                 </tr>
                 <tbody>
@@ -348,19 +470,19 @@
         <li><h3 class="brand">SNOWSTORM</h3></li>
     </ul>
     <ul>
-        <h4>Catégories</h4>
-        <li><a href="">Nouveautés</a></li>
+        <h4>Categories</h4>
+        <li><a href="">Nouveautes</a></li>
         <li><a href="">Meilleures ventes</a></li>
         <li><a href="">Classiques</a></li>
-        <li><a href="">Préfaits</a></li>
+        <li><a href="">Prefaits</a></li>
         <li><a href="">Personnaliser</a></li>
     </ul>
     <ul>
         <h4>Informations</h4>
         <li><a href="">Nous contacter</a></li>
         <li><a href="">Livraisons</a></li>
-        <li><a href="">Mentions légales</a></li>
-        <li><a href="">Confidentialité</a></li>
+        <li><a href="">Mentions legales</a></li>
+        <li><a href="">Confidentialite</a></li>
         <li><a href="tos.html">Conditions d'utilisation</a></li>
     </ul>
     <ul>
@@ -370,7 +492,7 @@
         <li><a href="">informations</a></li>
     </ul>
     <ul>
-        <h4>Nos réseaux</h4>
+        <h4>Nos reseaux</h4>
         <div class="reseaux">
             <a href="https://www.facebook.com/" target="_blank">
                 <li class="reseauLi"><img src="/Assets/IMG/image 33.png" alt="facebook"></li></a>
