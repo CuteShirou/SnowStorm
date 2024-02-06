@@ -83,7 +83,7 @@ $presentation = $row['presentation'];
         <ul class="nav-bar">
             <li><a href="Boutique.html" class="nav-but">NOS PRODUITS</a></li>
             <li><a href="Personnaliser.html" class="nav-but">PERSONNALISER</a></li>
-            <li><a href="Galerie.html" class="nav-but">GALERIE</a></li>
+            <li><a href="Galerie.php" class="nav-but">GALERIE</a></li>
             <li><a href="Support-Sav.html" class="nav-but">SUPPORT/SAV</a></li>
             <li><a href="FAQ.html" class="nav-but">FAQ</a></li>
             <li><a href="Contact.html" class="nav-but">CONTACT</a></li>

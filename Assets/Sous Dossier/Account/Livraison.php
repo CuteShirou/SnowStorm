@@ -39,7 +39,7 @@
       <hr>
 
       <label for="infSup"><b>informations supplÃ©mentaires</b></label>
-      <input type="text" placeholder="Entrer informations supplÃ©mentaires" name="infSup" id="infSup">
+      <input type="text" placeholder="Entrer informations supplémentaires" name="infSup" id="infSup">
       <hr>
       
       <label for="Ville"><b>Ville</b></label>

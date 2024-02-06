@@ -10,11 +10,8 @@ $sql = "SELECT `prix` , `presentation` FROM `KEYBOARDS`";
 $result = $connexion->query($sql);
 
 $prixArray = array(); // Tableau pour stocker les prix
-$presentationArray = array(); // Tableau pour stocker les présentations
-
-// Parcourir les résultats
+$presentationArray = array(); 
 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-    // Stocker les données dans les tableaux respectifs
     $prixArray[] = $row['prix'];
     $presentationArray[] = $row['presentation'];
 }
@@ -71,7 +68,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
             <!-- Affichage des prix et présentations -->
             <?php for ($i = 0; $i < count($prixArray); $i++): ?>
                 <div>
-                    <img src="Assets/IMG/image_37.png" style="width:50%"><p>Reference modèle</p>
+                    <img src="Assets/IMG/image_<?php echo $i + 37; ?>.png" style="width:50%"><p>Reference modèle</p>
                     <p>Prix : <?= $prixArray[$i] ?></p>
                     <p class="avis">Présentation : <?= $presentationArray[$i] ?></p>
                 </div>
