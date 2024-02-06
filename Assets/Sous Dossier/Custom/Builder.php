@@ -8,18 +8,25 @@ $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $sql = "SELECT * FROM `KEYBOARDS` WHERE 1";
 $result = $connexion->query($sql);
-
 $row = $result->fetch(PDO::FETCH_ASSOC);
+    
+function Bool($booleen) {
+    if ($booleen == 1) {
+        return "oui";
+    } else {
+        return "non";
+    }
+}
 
 $Designation = $row['designation'];
 $Marque = $row['marque'];
 $Modele = $row['modele'];
 $Format = $row['format'];
-$Compact = $row['compact']; //bool
-$TKL = $row['tkl']; //bool
+$Compact = Bool($row['compact']); //bool
+$TKL = Bool($row['tkl']); //bool
 $NormeDuClavier = $row['norme'];
 $Localisation = $row['localisation'];
-$SansFil = $row['sansfil']; //bool
+$SansFil = Bool($row['sansfil']); //bool
 $Interface = $row['interface_Ordi'];
 $TypeConnexion = $row['techno_Connexion_Clavier'];
 $touches = $row['touches'];
@@ -27,7 +34,7 @@ $switch = $row['switch'];
 $retroeclaire = $row['calvier_Retroeclaire'];
 $RGB = $row['retroeclairage_RGB'];
 $macro = $row['macro'];
-$multimedia = $row['sansmultimediafil'];
+$multimedia = $row['sansfil'];
 $PaveNumerique = $row['pave_Numerique'];
 $Couleur = $row['couleur'];
 $Largeur = $row['largeur'];
@@ -39,6 +46,7 @@ $ListOS = $row['OS'];
 $Utilisation = $row['gamer'];
 $GarantieCommerciale = $row['garantie_Commerciale'];
 $GarantieLegale = $row['garantie_Legale'];
+$presentation = $row['presentation'];
 
 ?>
 
@@ -201,10 +209,10 @@ $GarantieLegale = $row['garantie_Legale'];
         <div class="present">
             <div class="lineone">
                 <img src="../../IMG/Rectangle 128.png" alt="Preview Clavier">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                <p><td><?= $presentation ?></td></p>
             </div>
             <div class="linetwo">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                <p><td><?= $presentation ?></td></p>
                 <img src="../../IMG/Rectangle 129.png" alt="">
             </div>
         </div>

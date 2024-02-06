@@ -35,7 +35,7 @@ if (isset($_POST["submit"])) {
 
                         if ($query2->rowCount() == 1) {
                             $_SESSION['id'] = $query2->fetchColumn();
-                            header('Location: ../../../Index.html');
+                            header('Location: Account.php');
                           } 
                         }
                     }

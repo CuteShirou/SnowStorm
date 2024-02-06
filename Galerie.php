@@ -1,3 +1,27 @@
+<?php
+
+$serveur = "mysql:host=mysql-sitewebpro.alwaysdata.net;dbname=sitewebpro_snowstorm";
+$utilisateur = "345536";
+$motDePasse = "ToutEstPasBonDansLePHP2024";
+$connexion = new PDO($serveur,$utilisateur,$motDePasse);
+$connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+$sql = "SELECT `prix` , `presentation` FROM `KEYBOARDS`";
+$result = $connexion->query($sql);
+
+$prixArray = array(); // Tableau pour stocker les prix
+$presentationArray = array(); // Tableau pour stocker les présentations
+
+// Parcourir les résultats
+while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+    // Stocker les données dans les tableaux respectifs
+    $prixArray[] = $row['prix'];
+    $presentationArray[] = $row['presentation'];
+}
+
+?>
+
+
 <!DOCTYPE html>
 <!-- Inclusion des feuilles de style et des polices -->
 <html lang="fr">
@@ -7,11 +31,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 
+
 <head>
     <!-- Métadonnées de la page -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Snowstorm - Accueil</title>
+    <title>Snowstorm - Galerie</title>
 </head>
 
 <header>
@@ -39,67 +64,20 @@
 </header>
 
 <body>
-    <!-- Corps de la page avec deux sections (part1 et part2) -->
-    <div class="part1">
-        <!-- Slider avec trois images et des boutons de navigation -->
-        <div class="slider">
-            <span id="slide-1"></span>
-            <span id="slide-2"></span>
-            <span id="slide-3"></span>
-            <div class="image-container">
-              <img src="Assets/IMG/Rectangle 7.png" class="slide" width="1000" height="600"/>
-              <img src="Assets/IMG/exemple3.jpg" class="slide" width="1000" height="600"/>
-              <img src="Assets/IMG/exemple2.jpg" class="slide" width="1000" height="600"/>
-            </div>
-            <div class="buttons">
-              <a onclick="currentSlide(1)"></a>
-              <a onclick="currentSlide(2)"></a>
-              <a onclick="currentSlide(3)"></a>
-            </div>
+    <!-- Corps de la page avec le titre "GALERIE" et une grille d'images -->
+    <h1> GALERIE </h1>
+    <div class="wrapper">
+        <div class="grideGalerie">
+            <!-- Affichage des prix et présentations -->
+            <?php for ($i = 0; $i < count($prixArray); $i++): ?>
+                <div>
+                    <img src="Assets/IMG/image_37.png" style="width:50%"><p>Reference modèle</p>
+                    <p>Prix : <?= $prixArray[$i] ?></p>
+                    <p class="avis">Présentation : <?= $presentationArray[$i] ?></p>
+                </div>
+            <?php endfor; ?>
         </div>
-    </div>
-      
-    <div class="part2">
-        <!-- Section part2 avec des paragraphes et des blocs d'images -->
-        <p>NOS MEILLEURS VENTES</p>
-        <p>NOS NOUVEAUTÉS</p>
-        <p>NOS CLASSIQUES</p>
-        <!-- Bloc d'image avec lien et référence modèle -->
-        <div class="block">
-            <a href="" class="compare">+ Comparer</a>
-            <img src="Assets/IMG/image 3.png" alt="Meilleur Ventes">
-            <a href="Assets/Sous Dossier/Custom/Builder.html" class="ref">Référence modèle</a>
-        </div>
-        <div class="block">
-            <a href="" class="compare">+ Comparer</a>
-            <img src="Assets/IMG/image 3.png" alt="Nouveautés">
-            <a href="Assets/Sous Dossier/Custom/Builder.php" class="ref">Référence modèle</a>
-        </div>
-        <div class="block">
-            <a href="" class="compare">+ Comparer</a>
-            <img src="Assets/IMG/image 3.png" alt="Classiques">
-            <a href="Assets/Sous Dossier/Custom/Builder.php" class="ref">Référence modèle</a>
-        </div>
-        <p>NOS KITS PRÉFAITS</p>
-        <p>NOS KITS PRÉFAITS</p>
-        <p>NOS KITS PRÉFAITS</p>
-        <!-- Répétition de blocs pour Kits Préfaits -->
-        <div class="block">
-            <a href="" class="compare">+ Comparer</a>
-            <img src="Assets/IMG/image 3.png" alt="Kits Préfaits">
-            <a href="Assets/Sous Dossier/Custom/Builder.php" class="ref">Référence modèle</a>
-        </div>
-        <div class="block">
-            <a href="" class="compare">+ Comparer</a>
-            <img src="Assets/IMG/image 3.png" alt="Kits Préfaits">
-            <a href="Assets/Sous Dossier/Custom/Builder.php" class="ref">Référence modèle</a>
-        </div>
-        <div class="block">
-            <a href="" class="compare">+ Comparer</a>
-            <img src="Assets/IMG/image 3.png" alt="Kits Préfaits">
-            <a href="Assets/Sous Dossier/Custom/Builder.php" class="ref">Référence modèle</a>
-        </div>
-    </div>
+    </div>  
 </body>
 
 <footer class="footer">
@@ -143,4 +121,4 @@
         </div>
     </ul>
 </footer>
-<script src="Assets/JS/Index.js"></script>
+</html>

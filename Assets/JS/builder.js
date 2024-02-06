@@ -15,9 +15,19 @@ function showStep(step) {
 }
 
 // Fonction pour passer à l'étape suivante
-function nextStep() {
-    // Obtenir l'étape actuelle
-    const currentStepElement = document.querySelector('.step:visible');
+function nextStep(event) {
+    // Empêcher le rechargement de la page
+    event.preventDefault();
+
+    // Recherche de l'étape actuellement visible
+    let currentStepElement;
+    document.querySelectorAll('.step').forEach(function (stepElement) {
+        if (stepElement.style.display === 'block') {
+            currentStepElement = stepElement;
+        }
+    });
+
+    // Obtenir le numéro de l'étape actuelle
     const currentStepNumber = parseInt(currentStepElement.dataset.step);
 
     // Passer à l'étape suivante (si disponible)
