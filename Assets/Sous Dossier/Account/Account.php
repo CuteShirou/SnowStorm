@@ -5,10 +5,9 @@ require_once("BDDConnection.php");
 session_start();
 if (!isset($_SESSION['id'])) {
     header('Location: Login.php');
-    exit(); // Assurez-vous de terminer le script après la redirection
+    exit();
 }
 
-// Get the user's data from the database
 $userId = $_SESSION["id"];
 $query = $connexion->prepare("SELECT * FROM USERS WHERE id = :userId");
 $query->bindParam(":userId", $userId, PDO::PARAM_STR);
@@ -84,11 +83,11 @@ $user = $query->fetch(PDO::FETCH_ASSOC);
         session_destroy();
         unset($_SESSION['id']);
         header('Location: ../../../index.html');
-        exit(); // Assurez-vous de terminer le script après la redirection
+        exit();
     }
     if(isset($_POST['home'])) {
         header('Location: ../../../index.html'); 
-        exit(); // Assurez-vous de terminer le script après la redirection
+        exit();
     }
 
     if ($user['Administrateur'] == 1 && isset($_POST['editGarantie'])) {
@@ -102,3 +101,5 @@ $user = $query->fetch(PDO::FETCH_ASSOC);
     ?>
 </body>
 </html>
+
+

@@ -16,6 +16,10 @@
     src: url("../Fonts/OpenSans-VariableFont.ttf");
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 header {
     background-image: url("../IMG/Rectangle2.png"); 
     background-color: #000000;
@@ -533,8 +537,8 @@ h2{
 .key1 {
     width: 49px;
     height: 49px;
-    background-color: #ccc; /* Default color */
-    border: 1px solid #3328d8;
+    background-color: #000000; /* Default color */
+    border: 1px solid #000000;
     display: inline-block;
     margin: 0.5vh 1vw;
     position: absolute;
@@ -547,8 +551,8 @@ h2{
   .key2 {
     width: 49px;
     height: 49px;
-    background-color: #ccc; /* Default color */
-    border: 1px solid #3328d8;
+    background-color: #000000; /* Default color */
+    border: 1px solid #000000;
     display: inline-block;
     margin: 0.5vh 1vw;
     position: absolute;
@@ -561,8 +565,8 @@ h2{
   .key3 {
     width: 49px;
     height: 49px;
-    background-color: #ccc; /* Default color */
-    border: 1px solid #3328d8;
+    background-color: #000000; /* Default color */
+    border: 1px solid #000000;
     display: inline-block;
     margin: 0.5vh 1vw;
     position: absolute;
@@ -575,8 +579,8 @@ h2{
   .key4 {
     width: 49px;
     height: 49px;
-    background-color: #ccc; /* Default color */
-    border: 1px solid #3328d8;
+    background-color: #000000; /* Default color */
+    border: 1px solid #000000;
     display: inline-block;
     margin: 0.5vh 1vw;
     position: absolute;
@@ -589,8 +593,8 @@ h2{
   .key5 {
     width: 49px;
     height: 49px;
-    background-color: #ccc; /* Default color */
-    border: 1px solid #3328d8;
+    background-color: #000000; /* Default color */
+    border: 1px solid #000000;
     display: inline-block;
     margin: 0.5vh 1vw;
     position: absolute;
@@ -599,7 +603,16 @@ h2{
     z-index: 1;
     opacity: 0.5;
   }
+
+  .color-box {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border: 1px solid #999;
+  }
+  
   /* Style for color picker */
-  .color-picker {
-    margin-top: 20px;
+  .color-box:hover {
+    border-width: 2px; /* Highlight on hover */
   }

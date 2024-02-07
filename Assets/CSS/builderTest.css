@@ -538,8 +538,6 @@ h2{
     display: inline-block;
     margin: 0.5vh 1vw;
     position: absolute;
-    top: -257px;
-    left: 559px;
     z-index: 1;
     opacity: 0.5;
 }

@@ -1,18 +1,5 @@
 <?php
 include('../Sous Dossier/Account/BDDConnection.php');
-    $Prénom = $_POST['Prénom'];
-    $Nom = $_POST['Nom'];
-    $email = $_POST['email'];
-    $subject = $_POST['subject'];
-
-    $email_from = 'Snowstorm';
-    $email_subject = 'Nouveau message';
-    $email_body = "Prénom: $Prénom.\n".
-                    "Nom: $Nom.\n".
-                    "Email: $email.\n".
-                    "Message: $subject.\n";
-
-    $to = "emailjetable6@gmail.com"
 ?>
 
 <!DOCTYPE html>
@@ -35,30 +22,30 @@ include('../Sous Dossier/Account/BDDConnection.php');
 <header>
     <!-- En-tête du site avec le logo et la navigation -->
     <div>
-        <img src="Assets/IMG/image 29.png" alt="Logo du site" class="logo">
+        <img src="../IMG/image 29.png" alt="Logo du site" class="logo">
     </div>
     <nav>
         <!-- Barre de navigation avec des liens vers différentes sections -->
         <ul class="nav-bar">
             <li><a href="../../../index.html" class="brand">SNOWSTORM.GG</a></li>
-            <li><a href="../../../Panier.html"><img src="Assets/IMG/118089 1.png" class="opt"></a></li>
-            <li><a href="../Account/Account.php"><img src="Assets/IMG/profil 1.png" class="opt"></a></li>
-            <li><img src="Assets/IMG/image 31.png" class="opt"></a></li>
+            <li><a href="../../../Panier.html"><img src="../IMG/118089 1.png" class="opt"></a></li>
+            <li><a href="../Sous Dossier/Account/Account.php"><img src="../IMG/profil 1.png" class="opt"></a></li>
+            <li><img src="../IMG/image 31.png" class="opt"></a></li>
         </ul>
         <ul class="nav-bar">
-            <li><a href="Boutique.html" class="nav-but">NOS PRODUITS</a></li>
-            <li><a href="Personnaliser.html" class="nav-but">PERSONNALISER</a></li>
+            <li><a href="../../Boutique.html" class="nav-but">NOS PRODUITS</a></li>
+            <li><a href="../../Personnaliser.html" class="nav-but">PERSONNALISER</a></li>
             <li><a href="Galerie.php" class="nav-but">GALERIE</a></li>
-            <li><a href="Support-Sav.html" class="nav-but">SUPPORT/SAV</a></li>
-            <li><a href="FAQ.html" class="nav-but">FAQ</a></li>
-            <li><a href="Contact.html" class="nav-but">CONTACT</a></li>
+            <li><a href="../../Support-Sav.html" class="nav-but">SUPPORT/SAV</a></li>
+            <li><a href="../../FAQ.html" class="nav-but">FAQ</a></li>
+            <li><a href="Contact.php" class="nav-but">CONTACT</a></li>
         </ul>
     </nav>
 </header>
 
 <body>
     <div class="container">
-        <form action="Assets/PHP/Contact.php" class="formul">
+        <form action="Contact.php" class="formul">
         
             <input type="text" id="fname" name="Prénom" placeholder="Prénom">
         
@@ -81,25 +68,25 @@ include('../Sous Dossier/Account/BDDConnection.php');
     </ul>
     <ul>
         <h4>Catégories</h4>
-        <li><a href="">Nouveautés</a></li>
-        <li><a href="">Meilleures ventes</a></li>
-        <li><a href="">Classiques</a></li>
-        <li><a href="">Préfaits</a></li>
-        <li><a href="">Personnaliser</a></li>
+        <li><a href="#">Nouveautés</a></li>
+        <li><a href="#">Meilleures ventes</a></li>
+        <li><a href="#">Classiques</a></li>
+        <li><a href="#">Préfaits</a></li>
+        <li><a href="#">Personnaliser</a></li>
     </ul>
     <ul>
         <h4>Informations</h4>
-        <li><a href="">Nous contacter</a></li>
-        <li><a href="">Livraisons</a></li>
-        <li><a href="">Mentions légales</a></li>
-        <li><a href="">Confidentialité</a></li>
-        <li><a href="tos.html">Conditions d'utilisation</a></li>
+        <li><a href="#">Nous contacter</a></li>
+        <li><a href="#">Livraisons</a></li>
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">Confidentialité</a></li>
+        <li><a href="../../tos.html">Conditions d'utilisation</a></li>
     </ul>
     <ul>
         <h4>Mon compte</h4>
-        <li><a href="">Mes commandes</a></li>
-        <li><a href="">Mes customs</a></li>
-        <li><a href="">informations</a></li>
+        <li><a href="#">Mes commandes</a></li>
+        <li><a href="#">Mes customs</a></li>
+        <li><a href="#">informations</a></li>
     </ul>
     <ul>
         <h4>Nos réseaux</h4>

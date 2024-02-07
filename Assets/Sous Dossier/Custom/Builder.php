@@ -77,12 +77,12 @@ $presentation = $row['presentation'];
             <li><img src="../../IMG/image 31.png" class="opt"></a></li>
         </ul>
         <ul class="nav-bar">
-            <li><a href="Boutique.html" class="nav-but">NOS PRODUITS</a></li>
-            <li><a href="Personnaliser.html" class="nav-but">PERSONNALISER</a></li>
-            <li><a href="Galerie.php" class="nav-but">GALERIE</a></li>
-            <li><a href="Support-Sav.html" class="nav-but">SUPPORT/SAV</a></li>
-            <li><a href="FAQ.html" class="nav-but">FAQ</a></li>
-            <li><a href="Contact.html" class="nav-but">CONTACT</a></li>
+            <li><a href="../../../Boutique.html" class="nav-but">NOS PRODUITS</a></li>
+            <li><a href="../../../Personnaliser.html" class="nav-but">PERSONNALISER</a></li>
+            <li><a href="../../../Galerie.php" class="nav-but">GALERIE</a></li>
+            <li><a href="../../../Support-Sav.html" class="nav-but">SUPPORT/SAV</a></li>
+            <li><a href="../../../FAQ.html" class="nav-but">FAQ</a></li>
+            <li><a href="../../..//PHP/Contact.php" class="nav-but">CONTACT</a></li>
         </ul>
     </nav>
 </header>
@@ -475,25 +475,25 @@ $presentation = $row['presentation'];
     </ul>
     <ul>
         <h4>Categories</h4>
-        <li><a href="">Nouveautes</a></li>
-        <li><a href="">Meilleures ventes</a></li>
-        <li><a href="">Classiques</a></li>
-        <li><a href="">Prefaits</a></li>
-        <li><a href="">Personnaliser</a></li>
+        <li><a href="#">Nouveautes</a></li>
+        <li><a href="#">Meilleures ventes</a></li>
+        <li><a href="#">Classiques</a></li>
+        <li><a href="#">Prefaits</a></li>
+        <li><a href="#">Personnaliser</a></li>
     </ul>
     <ul>
         <h4>Informations</h4>
-        <li><a href="">Nous contacter</a></li>
-        <li><a href="">Livraisons</a></li>
-        <li><a href="">Mentions legales</a></li>
-        <li><a href="">Confidentialite</a></li>
-        <li><a href="tos.html">Conditions d'utilisation</a></li>
+        <li><a href="#">Nous contacter</a></li>
+        <li><a href="#">Livraisons</a></li>
+        <li><a href="#">Mentions legales</a></li>
+        <li><a href="#">Confidentialite</a></li>
+        <li><a href="../../../tos.html">Conditions d'utilisation</a></li>
     </ul>
     <ul>
         <h4>Mon compte</h4>
-        <li><a href="">Mes commandes</a></li>
-        <li><a href="">Mes customs</a></li>
-        <li><a href="">informations</a></li>
+        <li><a href="#">Mes commandes</a></li>
+        <li><a href="#">Mes customs</a></li>
+        <li><a href="#">informations</a></li>
     </ul>
     <ul>
         <h4>Nos reseaux</h4>

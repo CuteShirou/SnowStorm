@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+  }
+
 input[type=text], select, textarea {
     width: 50%;
     padding: 12px;
