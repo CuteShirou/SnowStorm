@@ -1,12 +1,8 @@
 <?php
 
-$serveur = "mysql:host=mysql-sitewebpro.alwaysdata.net;dbname=sitewebpro_snowstorm";
-$utilisateur = "345536";
-$motDePasse = "ToutEstPasBonDansLePHP2024";
-$connexion = new PDO($serveur,$utilisateur,$motDePasse);
-$connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+include('../Account/BDDConnection.php');
 
-$sql = "SELECT * FROM `KEYBOARDS` WHERE 1";
+$sql = "SELECT * FROM `KEYBOARDS` WHERE id=1";
 $result = $connexion->query($sql);
 $row = $result->fetch(PDO::FETCH_ASSOC);
     
