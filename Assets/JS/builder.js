@@ -63,7 +63,6 @@ const key62 = document.getElementById('key62');
 const key63 = document.getElementById('key63');
 const key64 = document.getElementById('key64');
 
-const colorOptions = document.querySelectorAll('.color-box');
 
 // Au chargement de la page, afficher la première étape et masquer la deuxième
 document.addEventListener('DOMContentLoaded', function () {
@@ -107,28 +106,3 @@ function nextStep(event) {
 // Appeler la fonction nextStep lorsque le bouton Suivant est cliqué
 document.querySelector('.suivant').addEventListener('click', nextStep);
 
-
-let selectedColor = null;
-
-// Event listener for color option click
-colorOptions.forEach(colorOption => {
-  colorOption.addEventListener('click', function() {
-    // Get the selected color value
-    selectedColor = this.style.backgroundColor;
-  });
-});
-
-// Event listener for keycap click
-key1.addEventListener('click', function() {
-  if (selectedColor) {
-    // Apply the selected color to the keycap
-    this.style.backgroundColor = selectedColor;
-  }
-});
-
-key2.addEventListener('click', function() {
-  if (selectedColor) {
-    // Apply the selected color to the keycap
-    this.style.backgroundColor = selectedColor;
-  }
-});

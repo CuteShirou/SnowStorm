@@ -1,11 +1,176 @@
 html {
     scroll-behavior: smooth;
-  }
+}
+
+header {
+    background-image: url("../IMG/Rectangle2.png"); 
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    margin: auto;
+    object-fit:contain;
+    width: 100%;
+    height: 12vh;
+}
+
+.logo {
+    height: 60%;
+    width: auto;
+}
+
+.nav-bar {
+    display: flex;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5vh;
+}
+
+nav li {
+    margin-right: 10vw;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul {
+    color: #F5EDED;
+    list-style: none;
+    padding: 0;
+    margin-left: 0;
+    display: flex;
+}
+
+ul{
+    list-style-type: none;
+    text-align: left;
+    display: block;
+    margin: 0 auto 0 auto;
+}
+
+.brand {
+    font-size: 3vh;
+    font-family: DeepShadow;
+    cursor: pointer;
+}
+
+.titrepage {
+    font-size: 5vh;
+    font-family: "Bebas Neue";
+    margin-left: 4%;
+    position: relative;
+    top: 3vh;
+
+}
+
+.generaltext {
+    font-family: "Open Sans";
+    font-size: 5vh;
+}
+
+.opt {
+    height: 70%;
+    width: auto;
+    margin-left: -13vw;
+    right: -55vw;
+    top: 0.7vh;
+    display: block;
+    position: relative;
+}
+
+.opt:hover {
+    transform: scale(1.1,1.1);
+    transition: transform 1s;
+}
+
+.nav-but {
+    white-space: nowrap;
+    font-size: 3.3vh;
+}
+
+.nav-but:hover {
+    text-decoration: underline;
+    color: #094fac;
+}
 
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-ul {
-    list-style-type: none;
+.footer {
+    text-align: center;
+    padding-bottom: 5vh;
+    display: flex;
+    background-color: #c4c4c4;
+    color: #000000;
+    bottom: 0;
+    width: 100%;
+    font-size: 150%;
+}
+
+footer ul li a {
+    font-family: "Roboto";
+    text-decoration: none;
+    color: #000000;
+    font-size: 60%;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+footer ul h4 {
+    font-family: "Roboto";
+    font-size: 80%;
+}
+
+.imgFooter{
+    height: 15vh;
+    width: auto;
+    padding-top: 3vh;
+}
+
+.reseauLi{
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.reseaux{
+    display: flex;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+
+.column {
+    -ms-flex: 33%;
+    flex: 33%;
+    max-width: 100%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+h1 {
+    font-family: "Bebas Neue";
+    font-size: 5vh;
+    text-align: left;
+    margin-top: 5vh;
+    margin-left: 5vh;
+}
+
+.easter a {
+    position: absolute;
+    size-adjust: 10%;
+    display: none;
 }
