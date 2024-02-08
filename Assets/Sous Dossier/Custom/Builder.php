@@ -54,7 +54,6 @@ $presentation = $row['presentation'];
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
 <script src="https://apis.google.com/js/platform.js" async defer></script>
-<script src="../../JS/builder.js"></script>
 
 <head>
     <!-- Metadonnees de la page -->
@@ -507,3 +506,4 @@ $presentation = $row['presentation'];
         </div>
     </ul>
 </footer>
+<script src="../../JS/builder.js"></script>

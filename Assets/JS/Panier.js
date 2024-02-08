@@ -252,4 +252,3 @@ if (window.location.pathname == '/panier/') {
         cartEmptyToggle();
     });
 }
-

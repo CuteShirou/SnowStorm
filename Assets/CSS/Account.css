@@ -20,9 +20,10 @@ html {
  scroll-behavior: smooth;
 }
 body {
-    margin: 0 40vw;
+    margin: 0 20vw;
     line-height:inherit;
     margin-top: 3vh;
+    display: flex;
 }
 hr {
  height:0;

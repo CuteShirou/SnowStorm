@@ -604,6 +604,11 @@ h2{
     opacity: 0.5;
   }
 
+  .key {
+    display: inline-block;
+    cursor: pointer;
+  }
+
   .color-box {
     display: inline-block;
     width: 40px;

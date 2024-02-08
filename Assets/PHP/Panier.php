@@ -1,14 +1,40 @@
+<?
+function panierEstVide() {
+    // Vous devez inclure ici la logique pour vérifier si le panier est vide
+    // Par exemple, vous pouvez vérifier si la session panier est vide
+    // Si votre panier est stocké dans une session nommée "panier", vous pouvez utiliser :
+    return empty($_SESSION['panier']);
+}
+
+// Redirige vers la page de commande si le panier n'est pas vide
+function redirigerVersCommande() {
+    header("Location: Commande.php");
+    exit;
+}
+
+// Vérifie si le panier est vide lorsque le bouton "Passer la commande" est cliqué
+if (isset($_POST['passer_commande'])) {
+    if (panierEstVide()) {
+        // Si le panier est vide, afficher un message d'erreur
+        echo "<script>alert('Panier vide');</script>";
+    } else {
+        // Si le panier n'est pas vide, rediriger vers la page de commande
+        redirigerVersCommande();
+    }
+}
+?>
 <!DOCTYPE html>
 <!-- Inclusion des feuilles de style et des polices -->
 <html lang="fr">
-<link rel="stylesheet" type="text/css" href="Assets/CSS/Style.css">
+<link rel="stylesheet" type="text/css" href="../CSS/Style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
 <script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="../JS/Panier.js"></script>
 
 <head>
-    <!-- M<?php echo utf8_encode("é") ?>tadonn<?php echo utf8_encode("é") ?>es de la page -->
+    <!-- Métadonnées de la page -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Snowstorm - PANIER</title>
@@ -17,23 +43,23 @@
 <header>
     <!-- En-tête du site avec le logo et la navigation -->
     <div>
-        <img src="Assets/IMG/image 29.png" alt="Logo du site" class="logo">
+        <img src="../IMG/image 29.png" alt="Logo du site" class="logo">
     </div>
     <nav>
-        <!-- Barre de navigation avec des liens vers diff<?php echo utf8_encode("é") ?>rentes sections -->
+        <!-- Barre de navigation avec des liens vers différentes sections -->
         <ul class="nav-bar">
-            <li><a href="index.html" class="brand">SNOWSTORM.GG</a></li>
-            <li><a href="Panier.html"><img src="Assets/IMG/118089 1.png" class="opt"></a></li>
-            <li><a href="Assets/Sous Dossier/Account/Account.php"><img src="Assets/IMG/profil 1.png" class="opt"></a></li>
-            <li><img src="Assets/IMG/image 31.png" class="opt"></a></li>
+            <li><a href="../../index.html" class="brand">SNOWSTORM.GG</a></li>
+            <li><a href="Panier.php"><img src="../IMG/118089 1.png" class="opt"></a></li>
+            <li><a href="../Sous Dossier/Account/Account.php"><img src="../IMG/profil 1.png" class="opt"></a></li>
+            <li><img src="../IMG/image 31.png" class="opt"></a></li>
         </ul>
         <ul class="nav-bar">
-            <li><a href="Boutique.html" class="nav-but">NOS PRODUITS</a></li>
-            <li><a href="Personnaliser.html" class="nav-but">PERSONNALISER</a></li>
-            <li><a href="Assets/PHP/Galerie.php" class="nav-but">GALERIE</a></li>
-            <li><a href="Support-Sav.html" class="nav-but">SUPPORT/SAV</a></li>
-            <li><a href="FAQ.html" class="nav-but">FAQ</a></li>
-            <li><a href="Assets/PHP/Contact.php" class="nav-but">CONTACT</a></li>
+            <li><a href="../../Boutique.html" class="nav-but">NOS PRODUITS</a></li>
+            <li><a href="../../Personnaliser.html" class="nav-but">PERSONNALISER</a></li>
+            <li><a href="Galerie.php" class="nav-but">GALERIE</a></li>
+            <li><a href="../../Support-Sav.html" class="nav-but">SUPPORT/SAV</a></li>
+            <li><a href="../../FAQ.html" class="nav-but">FAQ</a></li>
+            <li><a href="Contact.php" class="nav-but">CONTACT</a></li>
         </ul>
     </nav>
 </header>
@@ -42,7 +68,7 @@
     <h1> PANIER </h1>
     <table class="table">
         <thead>
-            <tr><th>Article</th><th>Prix</th><th>Quantit<?php echo utf8_encode("é") ?></th></tr>
+            <tr><th>Article</th><th>Prix</th><th>Quantité</th></tr>
         </thead>
         <tbody id="cart-tablebody"></tbody>
     </table>
@@ -54,7 +80,7 @@
 
 <footer class="footer">
     <ul>
-        <li><img src="/Assets/IMG/image 29.png" alt="logo" class="imgFooter"></li>
+        <li><img src="../IMG/image 29.png" alt="logo" class="imgFooter"></li>
         <li><h3 class="brand">SNOWSTORM</h3></li>
     </ul>
     <ul>
@@ -71,7 +97,7 @@
         <li><a href="#">Livraisons</a></li>
         <li><a href="#">Mentions légales</a></li>
         <li><a href="#">Confidentialité</a></li>
-        <li><a href="tos.html">Conditions d'utilisation</a></li>
+        <li><a href="../../tos.html">Conditions d'utilisation</a></li>
     </ul>
     <ul>
         <h4>Mon compte</h4>
@@ -80,12 +106,11 @@
         <li><a href="#">informations</a></li>
     </ul>
     <ul>
-        <h4>Nos r<?php echo utf8_encode("é") ?>seaux</h4>
+        <h4>Nos réseaux</h4>
         <div class="reseaux">
-            <li class="reseauLi"><img src="/Assets/IMG/image 33.png" alt="facebook"></li>
-            <li class="reseauLi"><img src="/Assets/IMG/image 34.png" alt="instagram"></li>
-            <li class="reseauLi"><img src="/Assets/IMG/image 32.png" alt="youtube"></li>
+            <li class="reseauLi"><img src="../IMG/image 33.png" alt="facebook"></li>
+            <li class="reseauLi"><img src="../IMG/image 34.png" alt="instagram"></li>
+            <li class="reseauLi"><img src="../IMG/image 32.png" alt="youtube"></li>
         </div>
     </ul>
 </footer>
-<script src="Assets/JS/Panier.js"></script>

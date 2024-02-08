@@ -62,8 +62,6 @@ const key61 = document.getElementById('key61');
 const key62 = document.getElementById('key62');
 const key63 = document.getElementById('key63');
 const key64 = document.getElementById('key64');
-const colorOptions = document.querySelectorAll('.color-box');
-let selectedColorBox = null;
 
 
 // Au chargement de la page, afficher la première étape et masquer la deuxième
@@ -108,30 +106,75 @@ function nextStep(event) {
 // Appeler la fonction nextStep lorsque le bouton Suivant est cliqué
 document.querySelector('.suivant').addEventListener('click', nextStep);
 
+// Fonction pour enregistrer les choix de l'utilisateur dans un fichier JSON
+function saveChoices() {
+  // Récupérer les choix de l'utilisateur
+  const selectedSwitch = document.querySelector('.dropdown-content .selected').textContent;
+  const selectedBackplateColor = document.querySelector('input[name="radio"]:checked').value;
 
-colorOptions.forEach(colorOption => {
-    colorOption.addEventListener('click', function() {
-      // Remove active class from previous color box
-      if (selectedColorBox) {
-        selectedColorBox.classList.remove('active-color');
+  // Créer un objet contenant les choix de l'utilisateur
+  const userChoices = { 
+      switch: selectedSwitch, 
+      backplateColor: selectedBackplateColor 
+  };
+
+  // Convertir l'objet en format JSON
+  const jsonData = JSON.stringify(userChoices);
+
+  // Envoyer les données JSON à un fichier sur le serveur (via une requête AJAX par exemple)
+  // Exemple d'utilisation de l'API Fetch :
+  fetch('save_user_choices.php', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: jsonData
+  })
+  .then(response => {
+      if (!response.ok) {
+          throw new Error('Erreur lors de l\'enregistrement des choix utilisateur');
       }
-  
-      // Get the selected color value
-      const color = this.style.backgroundColor;
-  
-      // Highlight the selected color box
-      this.classList.add('active-color');
-      selectedColorBox = this;
-    });
+      console.log('Choix utilisateur enregistrés avec succès');
+  })
+  .catch(error => {
+      console.error('Erreur :', error);
   });
+}
+
+
+// ------ Part 2 -------
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Get references to key elements and color options
+    const keys = document.querySelectorAll('.key');
+    const colorBoxes = document.querySelectorAll('.color-box');
   
-  // Event listener for keycap click
-  key1.addEventListener('click', function() {
-    if (selectedColorBox) {
-      // Get the selected color value
-      const color = selectedColorBox.style.backgroundColor;
-      
-      // Apply the selected color to the keycap
-      this.style.backgroundColor = color;
-    }
+    let selectedColorBox = null;
+  
+    // Event listener for color box click
+    colorBoxes.forEach(colorBox => {
+      colorBox.addEventListener('click', function() {
+        // Remove active class from previous color box
+        if (selectedColorBox) {
+          selectedColorBox.classList.remove('active-color');
+        }
+  
+        // Highlight the selected color box
+        this.classList.add('active-color');
+        selectedColorBox = this;
+      });
+    });
+  
+    // Event listener for keycap click
+    keys.forEach(key => {
+      key.addEventListener('click', function() {
+        if (selectedColorBox) {
+          // Get the selected color value
+          const color = selectedColorBox.style.backgroundColor;
+          
+          // Apply the selected color to the keycap
+          this.style.backgroundColor = color;
+        }
+      });
+    });
   });
