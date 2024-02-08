@@ -3,7 +3,6 @@ include('../Sous Dossier/Account/BDDConnection.php');
 ?>
 
 <!DOCTYPE html>
-<!-- Inclusion des feuilles de style et des polices -->
 <html lang="fr">
 <link rel="stylesheet" type="text/css" href="../CSS/Style.css">
 <link rel="stylesheet" type="text/css" href="../CSS/Contact.css">
