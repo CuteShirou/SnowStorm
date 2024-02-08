@@ -63,7 +63,6 @@ const key62 = document.getElementById('key62');
 const key63 = document.getElementById('key63');
 const key64 = document.getElementById('key64');
 
-
 // Au chargement de la page, afficher la première étape et masquer la deuxième
 document.addEventListener('DOMContentLoaded', function () {
     showStep(1);  // Appelle la fonction showStep() pour afficher la première étape
