@@ -1,4 +1,4 @@
-<?
+<?php
 function panierEstVide() {
     // Vous devez inclure ici la logique pour vérifier si le panier est vide
     // Par exemple, vous pouvez vérifier si la session panier est vide
