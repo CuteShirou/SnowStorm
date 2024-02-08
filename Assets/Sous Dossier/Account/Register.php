@@ -46,7 +46,6 @@ if (isset($_POST["submit"])) {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="fr">
 <link rel="stylesheet" type="text/css" href="../../CSS/AccountGlobale.css">
@@ -94,7 +93,7 @@ if (isset($_POST["submit"])) {
     </div>
 
     <div class="container signin">
-      <p>Vous avez deja  un compte ? <a href="Login.php">Se connecter</a>.</p>
+      <p>Vous avez deja un compte ? <a href="Login.php">Se connecter</a>.</p>
     </div>
   </form>
 </body>
