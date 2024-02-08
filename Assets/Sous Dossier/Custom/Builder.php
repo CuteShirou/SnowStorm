@@ -160,17 +160,19 @@ $presentation = $row['presentation'];
                             Nom de la couleur + prix si frais supplémentaires
                         </label>
                     </div>
-                    <a href="" class="suivant">Suivant</a>
+                    <a href="" class="suivant" style="margin-top: -10vw;">Suivant</a>
                 </div>
             </div>
         </div>
         <div class="step step-2" data-step="2">
             <div class="steps">
                 <!-- Section pour les étapes du processus -->
-                <p class="para">Étape 1 : Choix de la base</p>
-                <div class="complete">
+                <div class="uncomplete">
+                    <a href="" class="para">1</a>
+                </div>
+                <p class="paraSelect">Étape 2 : Choix de la couleur</p>
+                <div class="uncomplete">
                     <!-- Bloc indiquant les étapes complétées -->
-                    <a href="#" class="para">2</a>
                     <a href="#" class="para">3</a>
                     <a href="#" class="para">4</a>
                 </div>
@@ -180,23 +182,90 @@ $presentation = $row['presentation'];
                 </div>
             </div>
             <!-- Section pour le choix de la couleur de la base avec des boutons radio -->
-            <div class="baseColor">
-                <p>Choix de la couleur de la base :</p>
-                <div class="colorChoice">
-                    <label class="form-control">
-                        <input type="radio" name="baseRadio" />
-                        Couleur 1
-                    </label>
-                    <label class="form-control">
-                        <input type="radio" name="baseRadio" />
-                        Couleur 2
-                    </label>
-                    <label class="form-control">
-                        <input type="radio" name="baseRadio" />
-                        Couleur 3
-                    </label>
-                    <!-- Ajoutez autant d'options que nécessaire -->
-                </div>
+            <div class="picBuilder">
+                <!-- Section pour l'affichage de l'image de prévisualisation -->
+                <img src="../../IMG/layout.png" width="754px" height="264px" alt="Preview">
+            </div>
+            <div class="key-container">
+                <div class="key key1" id="key1"></div>
+                <div class="key key1" id="key2" style="left: 608px;"></div>
+                <div class="key key1" id="key3" style="left: 657px;"></div>
+                <div class="key key1" id="key4" style="left: 706px;"></div>
+                <div class="key key1" id="key5" style="left: 755px;"></div>
+                <div class="key key1" id="key6" style="left: 804px;"></div>
+                <div class="key key1" id="key7" style="left: 853px;"></div>
+                <div class="key key1" id="key8" style="left: 902px;"></div>
+                <div class="key key1" id="key9" style="left: 951px;"></div>
+                <div class="key key1" id="key10" style="left: 1000px;"></div>
+                <div class="key key1" id="key11" style="left: 1049px;"></div>
+                <div class="key key1" id="key12" style="left: 1098px;"></div>
+                <div class="key key1" id="key13" style="left: 1147px;"></div>
+                <div class="key key1" id="key14" style="width: 98px; left: 1196px;"></div>
+                <div class="key key2" id="key15" style="width: 74px;"></div>
+                <div class="key key2" id="key16" style="left: 633px;"></div>
+                <div class="key key2" id="key17" style="left: 682px;"></div>
+                <div class="key key2" id="key18" style="left: 731px;"></div>
+                <div class="key key2" id="key19" style="left: 780px;"></div>
+                <div class="key key2" id="key20" style="left: 829px;"></div>
+                <div class="key key2" id="key21" style="left: 878px;"></div>
+                <div class="key key2" id="key22" style="left: 927px;"></div>
+                <div class="key key2" id="key23" style="left: 976px;"></div>
+                <div class="key key2" id="key24" style="left: 1025px;"></div>
+                <div class="key key2" id="key25" style="left: 1074px;"></div>
+                <div class="key key2" id="key26" style="left: 1123px;"></div>
+                <div class="key key2" id="key27" style="left: 1172px;"></div>
+                <div class="key key2" id="key28" style="width: 74px;left: 1221px;"></div>
+                <div class="key key3" id="key29" style="width: 86px;"></div>
+                <div class="key key3" id="key30" style="left: 645px;"></div>
+                <div class="key key3" id="key31" style="left: 694px;"></div>
+                <div class="key key3" id="key32" style="left: 743px;"></div>
+                <div class="key key3" id="key33" style="left: 792px;"></div>
+                <div class="key key3" id="key34" style="left: 841px;"></div>
+                <div class="key key3" id="key35" style="left: 890px;"></div>
+                <div class="key key3" id="key36" style="left: 939px;"></div>
+                <div class="key key3" id="key37" style="left: 988px;"></div>
+                <div class="key key3" id="key38" style="left: 1037px;"></div>
+                <div class="key key3" id="key39" style="left: 1086px;"></div>
+                <div class="key key3" id="key40" style="left: 1135px;"></div>
+                <div class="key key3" id="key41" style="width: 110px; left: 1184px;"></div>
+                <div class="key key4" id="key42" style="width: 98px;"></div>
+                <div class="key key4" id="key43" style="left: 657px;"></div>
+                <div class="key key4" id="key44" style="left: 706px;"></div>
+                <div class="key key4" id="key45" style="left: 755px;"></div>
+                <div class="key key4" id="key46" style="left: 804px;"></div>
+                <div class="key key4" id="key47" style="left: 853px;"></div>
+                <div class="key key4" id="key48" style="left: 902px;"></div>
+                <div class="key key4" id="key49" style="left: 951px;"></div>
+                <div class="key key4" id="key50" style="left: 1000px;"></div>
+                <div class="key key4" id="key51" style="left: 1049px;"></div>
+                <div class="key key4" id="key52" style="left: 1098px;"></div>
+                <div class="key key4" id="key53" style="left: 1147px;"></div>
+                <div class="key key4" id="key54" style="left: 1196px;"></div>
+                <div class="key key4" id="key55" style="left: 1245px;"></div>
+                <div class="key key5" id="key56"></div>
+                <div class="key key5" id="key57" style="left: 608px;"></div>
+                <div class="key key5" id="key58" style="left: 657px;"></div>
+                <div class="key key5" id="key59" style="left: 706px;"></div>
+                <div class="key key5" id="key60" style="left: 755px; width: 343px;"></div>
+                <div class="key key5" id="key61" style="left: 1098px;"></div>
+                <div class="key key5" id="key62" style="left: 1147px;"></div>
+                <div class="key key5" id="key63" style="left: 1196px;"></div>
+                <div class="key key5" id="key64" style="left: 1245px;"></div>
+            </div>
+            <div id="colorOptions">
+                <div class="color-box" style="background-color: #E35656;"></div>
+                <div class="color-box" style="background-color: #764848;"></div>
+                <div class="color-box" style="background-color: #6CAB8D;"></div>
+                <div class="color-box" style="background-color: #88EBD3;"></div>
+                <div class="color-box" style="background-color: #4B74DD;"></div>
+                <div class="color-box" style="background-color: #1E1AD8;"></div>
+                <div class="color-box" style="background-color: #FFEE59;"></div>
+                <div class="color-box" style="background-color: #FDF4A0;"></div>
+                <div class="color-box" style="background-color: #FFFEFE;"></div>
+                <div class="color-box" style="background-color: #6e6e6e;"></div>
+            </div>
+            <div>
+                <button id="setColorButton" class="suivant" style="margin-left: 3vw;">Appliquer la couleur au clavier entier</button>
                 <a href="" class="suivant">Suivant</a>
             </div>
         </div>
@@ -214,257 +283,222 @@ $presentation = $row['presentation'];
         </div>
     </section>
     <section>
-    <div class="steps">
-        <!-- Section pour les etapes du processus -->
-        <p class="para">etape 1 : Choix de la base</p>
-        <div class="complete">
-            <!-- Bloc indiquant les etapes completees -->
-            <a href="#" class="para">2</a>
-            <a href="#" class="para">3</a>
-            <a href="#" class="para">4</a>
+        <h1 class="productFiche">Fiche Produit</h1>
+        <div class="ficheProduct">
+            <h2>Responsive Table</h2>
+            <div class="table-wrapper">
+                <table class="fl-table">
+                    <thead>
+                    <tr>
+                        <th>.</th>
+                        <th>.</th>
+                        <th>.</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>information general</td>
+                        <td>Désignation</td>
+                        <td>$Désignation</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Marque</td>
+                        <td>Content 2</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Modèle</td>
+                        <td>Content 3</td>
+                    </tr>
+                    <tr>
+                        <td>Content 4</td>
+                        <td>Format</td>
+                        <td>Content 4</td>
+                    </tr>
+                    <tr>
+                        <td>Content 5</td>
+                        <td>Compact</td>
+                        <td>Content 5</td>
+                    </tr>
+                    <tr>
+                        <td>Content 6</td>
+                        <td>TKL</td>
+                        <td>Content 6</td>
+                    </tr>
+                    <tr>
+                        <td>Content 7</td>
+                        <td>Norme du clavier</td>
+                        <td>Content 7</td>
+                    </tr>
+                    <tr>
+                        <td>Content 8</td>
+                        <td>Localisation</td>
+                        <td>Content 8</td>
+                    </tr>
+                    <tr>
+                        <td>Content 9</td>
+                        <td>Sans-fil</td>
+                        <td>Content 9</td>
+                    </tr>
+                    <tr>
+                        <td>Content 10</td>
+                        <td>Interface avec l'ordinateur</td>
+                        <td>Content 10</td>
+                    </tr>
+                    <tr>
+                        <td>Content 11</td>
+                        <td>Technologie de connexion du clavier</td>
+                        <td>Content 11</td>
+                    </tr>
+                    <tr>
+                        <td>Content 12</td>
+                        <td>Type de touches</td>
+                        <td>Content 12</td>
+                    </tr>
+                    <tr>
+                        <td>Content 13</td>
+                        <td>Type de switch</td>
+                        <td>Content 13</td>
+                    </tr>
+                    <tr>
+                        <td>Content 14</td>
+                        <td>Clavier rétroéclairé</td>
+                        <td>Content 14</td>
+                    </tr>
+                    <tr>
+                        <td>Content 15</td>
+                        <td>Rétroéclairage RGB</td>
+                        <td>Content 15</td>
+                    </tr>
+                    <tr>
+                        <td>Content 16</td>
+                        <td>Touches macro</td>
+                        <td>Content 16</td>
+                    </tr>
+                    <tr>
+                        <td>Content 17</td>
+                        <td>Touches multimédia</td>
+                        <td>Content 17</td>
+                    </tr>
+                    <tr>
+                        <td>Content 18</td>
+                        <td>Pavé numérique</td>
+                        <td>Content 18</td>
+                    </tr>
+                    <tr>
+                        <td>Content 19</td>
+                        <td>Couleur</td>
+                        <td>Content 19</td>
+                    </tr>
+                    <tr>
+                        <td>Content 20</td>
+                        <td>Largeur</td>
+                        <td>Content 20</td>
+                    </tr>
+                    <tr>
+                        <td>Content 21</td>
+                        <td>Hauteur</td>
+                        <td>Content 21</td>
+                    </tr>
+                    <tr>
+                        <td>Content 22</td>
+                        <td>Profondeur</td>
+                        <td>Content 22</td>
+                    </tr>
+                    <tr>
+                        <td>Content 23</td>
+                        <td>Poids</td>
+                        <td>Content 23</td>
+                    </tr>
+                    <tr>
+                        <td>Content 24</td>
+                        <td>Type d'alimentation</td>
+                        <td>Content 24</td>
+                    </tr>
+                    <tr>
+                        <td>Content 25</td>
+                        <td>OS supporté(s)</td>
+                        <td>Content 25</td>
+                    </tr>
+                    <tr>
+                        <td>Content 26</td>
+                        <td>Utilisation</td>
+                        <td>Content 26</td>
+                    </tr>
+                    <tr>
+                        <td>Content 27</td>
+                        <td>Garantie commerciale</td>
+                        <td>Content 27</td>
+                    </tr>
+                    <tr>
+                        <td>Content 28</td>
+                        <td>Garantie légale</td>
+                        <td>Content 28</td>
+                    </tr>
+                    <tbody>
+                </table>
+            </div>
         </div>
-        <div class="saver">
-            <!-- Bouton pour sauvegarder la configuration -->
-            <a href="#" class="save">Sauvegarder ma configuration</a>
+        <div class="avisDiv">
+            <div class="avisBlock">
+                <div class="writter">
+                    <img class="profiles" src="../../IMG/profil 1-5.png" alt="ProfilUwU">
+                    <p>Jean-Michel Jarre</p>
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <div class="stars">
+                    <img src="../../IMG/Star_4.svg" alt="fullstar">
+                    <img src="../../IMG/Star_4.svg" alt="fullstar">
+                    <img src="../../IMG/Star_4.svg" alt="fullstar">
+                    <img src="../../IMG/Star_4.svg" alt="fullstar">
+                    <img src="../../IMG/Star_5.svg" alt="fullstar">
+                </div>
+            </div>
+            <div class="avisBlock">
+                <div class="writter">
+                    <img class="profiles" src="../../IMG/profil 1-5.png" alt="ProfilUwU">
+                    <p>Jean-Marie Bigard</p>
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <div class="stars">
+                    <img src="../../IMG/Star_4.svg" alt="fullstar">
+                    <img src="../../IMG/Star_4.svg" alt="fullstar">
+                    <img src="../../IMG/Star_4.svg" alt="fullstar">
+                    <img src="../../IMG/Star_4.svg" alt="fullstar">
+                    <img src="../../IMG/Star_5.svg" alt="fullstar">
+                </div>
+            </div>
+            <div class="avisBlock">
+                <div class="writter">
+                    <img class="profiles" src="../../IMG/profil 1-5.png" alt="ProfilUwU">
+                    <p>Peter Laposte</p>
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <div class="stars">
+                    <img src="../../IMG/Star_4.svg" alt="fullstar">
+                    <img src="../../IMG/Star_4.svg" alt="fullstar">
+                    <img src="../../IMG/Star_4.svg" alt="fullstar">
+                    <img src="../../IMG/Star_4.svg" alt="fullstar">
+                    <img src="../../IMG/Star_5.svg" alt="fullstar">
+                </div>
+            </div>
+            <div class="avisBlock">
+                <div class="writter">
+                    <img class="profiles" src="../../IMG/profil 1-5.png" alt="ProfilUwU">
+                    <p>Marie Boite</p>
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <div class="stars">
+                    <img src="../../IMG/Star_4.svg" alt="fullstar">
+                    <img src="../../IMG/Star_4.svg" alt="fullstar">
+                    <img src="../../IMG/Star_4.svg" alt="fullstar">
+                    <img src="../../IMG/Star_4.svg" alt="fullstar">
+                    <img src="../../IMG/Star_5.svg" alt="fullstar">
+                </div>
+            </div>
         </div>
-    </div>
-    <!-- Section pour le choix de la couleur de la base avec des boutons radio -->
-    <div class="baseColor">
-        <p>Choix de la couleur de la base :</p>
-        <div class="colorChoice">
-            <label class="form-control">
-                <input type="radio" name="baseRadio" />
-                Couleur 1
-            </label>
-            <label class="form-control">
-                <input type="radio" name="baseRadio" />
-                Couleur 2
-            </label>
-            <label class="form-control">
-                <input type="radio" name="baseRadio" />
-                Couleur 3
-            </label>
-            <!-- Ajoutez autant d'options que necessaire -->
-        </div>
-        <a href="#" class="suivant" onclick="goToStep(2)">Suivant</a>
-    </div>
     </section>
-
-    <h1 class="productFiche">Fiche Produit</h1>
-    <div class="ficheProduct">
-        <h2>Fiche Produit</h2>
-        <div class="table-wrapper">
-            <table class="fl-table">
-                <thead>
-                <tr>
-                    <th>.</th>
-                    <th>.</th>
-                    <th>.</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>INFORMATIONS GENERALES</td>
-                    <td>Designation</td>
-                    <td><?= $Designation ?></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Marque</td>
-                    <td><?= $Marque ?></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Modele</td>
-                    <td><?= $Modele ?></td>
-                </tr>
-                <tr>
-                    <td>FORMAT DU CLAVIER/td>
-                    <td>Format</td>
-                    <td><?= $Format ?></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Compact</td>
-                    <td><?= $Compact ?></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>TKL</td>
-                    <td><?= $TKL ?></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Norme du clavier</td>
-                    <td><?= $NormeDuClavier ?></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Localisation</td>
-                    <td><?= $Localisation ?></td>
-                </tr>
-                <tr>
-                    <td>INTERFACE</td>
-                    <td>Sans-fil</td>
-                    <td><?= $SansFil ?></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Interface avec l'ordinateur</td>
-                    <td><?= $Interface ?></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Technologie de connexion du clavier</td>
-                    <td><?= $TypeConnexion ?></td>
-                </tr>
-                <tr>
-                    <td>ERGONOMIE</td>
-                    <td>Type de touches</td>
-                    <td><?= $touches ?></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Type de switch</td>
-                    <td><?= $switch ?></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Clavier retroeclaire</td>
-                    <td><?= $retroeclaire ?></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Retroeclairage RGB</td>
-                    <td><?= $RGB ?></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Touches macro</td>
-                    <td><?= $macro ?></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Touches multimedia</td>
-                    <td><?= $multimedia ?></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Pave numerique</td>
-                    <td><?= $PaveNumerique ?></td>
-                </tr>
-                <tr>
-                    <td>CARACTERISTIQUES PHYSIQUES</td>
-                    <td>Couleur</td>
-                    <td><?= $Couleur ?></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Largeur</td>
-                    <td><?= $Largeur ?></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Hauteur</td>
-                    <td><?= $Hauteur ?></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Profondeur</td>
-                    <td><?= $Profondeur ?></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Poids</td>
-                    <td><?= $Poids ?></td>
-                </tr>
-                <tr>
-                    <td>ALIMENTATION</td>
-                    <td>Type d'alimentation</td>
-                    <td><?= $alimentation ?></td>
-                </tr>
-                <tr>
-                    <td>COMPATIBILITE</td>
-                    <td>OS supporte(s)</td>
-                    <td><?= $ListOS ?></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Utilisation</td>
-                    <td><?= $Utilisation ?></td>
-                </tr>
-                <tr>
-                    <td>GARANTIES</td>
-                    <td>Garantie commerciale</td>
-                    <td><?= $GarantieCommerciale ?></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Garantie legale</td>
-                    <td><?= $GarantieLegale ?></td>
-                </tr>
-                <tbody>
-            </table>
-        </div>
-    </div>
-    <div class="avisDiv">
-        <div class="avisBlock">
-            <div class="writter">
-                <img class="profiles" src="../../IMG/profil 1-5.png" alt="ProfilUwU">
-                <p>Jean-Michel Jarre</p>
-            </div>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <div class="stars">
-                <img src="../../IMG/Star_4.svg" alt="fullstar">
-                <img src="../../IMG/Star_4.svg" alt="fullstar">
-                <img src="../../IMG/Star_4.svg" alt="fullstar">
-                <img src="../../IMG/Star_4.svg" alt="fullstar">
-                <img src="../../IMG/Star_5.svg" alt="fullstar">
-            </div>
-        </div>
-        <div class="avisBlock">
-            <div class="writter">
-                <img class="profiles" src="../../IMG/profil 1-5.png" alt="ProfilUwU">
-                <p>Jean-Marie Bigard</p>
-            </div>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <div class="stars">
-                <img src="../../IMG/Star_4.svg" alt="fullstar">
-                <img src="../../IMG/Star_4.svg" alt="fullstar">
-                <img src="../../IMG/Star_4.svg" alt="fullstar">
-                <img src="../../IMG/Star_4.svg" alt="fullstar">
-                <img src="../../IMG/Star_5.svg" alt="fullstar">
-            </div>
-        </div>
-        <div class="avisBlock">
-            <div class="writter">
-                <img class="profiles" src="../../IMG/profil 1-5.png" alt="ProfilUwU">
-                <p>Peter Laposte</p>
-            </div>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <div class="stars">
-                <img src="../../IMG/Star_4.svg" alt="fullstar">
-                <img src="../../IMG/Star_4.svg" alt="fullstar">
-                <img src="../../IMG/Star_4.svg" alt="fullstar">
-                <img src="../../IMG/Star_4.svg" alt="fullstar">
-                <img src="../../IMG/Star_5.svg" alt="fullstar">
-            </div>
-        </div>
-        <div class="avisBlock">
-            <div class="writter">
-                <img class="profiles" src="../../IMG/profil 1-5.png" alt="ProfilUwU">
-                <p>Marie Boite</p>
-            </div>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <div class="stars">
-                <img src="../../IMG/Star_4.svg" alt="fullstar">
-                <img src="../../IMG/Star_4.svg" alt="fullstar">
-                <img src="../../IMG/Star_4.svg" alt="fullstar">
-                <img src="../../IMG/Star_4.svg" alt="fullstar">
-                <img src="../../IMG/Star_5.svg" alt="fullstar">
-            </div>
-        </div>
-    </div>
 </body>
 
 <footer class="footer">
@@ -474,29 +508,29 @@ $presentation = $row['presentation'];
         <li><h3 class="brand">SNOWSTORM</h3></li>
     </ul>
     <ul>
-        <h4>Categories</h4>
-        <li><a href="#">Nouveautes</a></li>
-        <li><a href="#">Meilleures ventes</a></li>
-        <li><a href="#">Classiques</a></li>
-        <li><a href="#">Prefaits</a></li>
-        <li><a href="#">Personnaliser</a></li>
+        <h4>Catégories</h4>
+        <li><a href="">Nouveautés</a></li>
+        <li><a href="">Meilleures ventes</a></li>
+        <li><a href="">Classiques</a></li>
+        <li><a href="">Préfaits</a></li>
+        <li><a href="">Personnaliser</a></li>
     </ul>
     <ul>
         <h4>Informations</h4>
-        <li><a href="#">Nous contacter</a></li>
-        <li><a href="#">Livraisons</a></li>
-        <li><a href="#">Mentions legales</a></li>
-        <li><a href="#">Confidentialite</a></li>
-        <li><a href="../../../tos.html">Conditions d'utilisation</a></li>
+        <li><a href="">Nous contacter</a></li>
+        <li><a href="">Livraisons</a></li>
+        <li><a href="">Mentions légales</a></li>
+        <li><a href="">Confidentialité</a></li>
+        <li><a href="tos.html">Conditions d'utilisation</a></li>
     </ul>
     <ul>
         <h4>Mon compte</h4>
-        <li><a href="#">Mes commandes</a></li>
-        <li><a href="#">Mes customs</a></li>
-        <li><a href="#">informations</a></li>
+        <li><a href="">Mes commandes</a></li>
+        <li><a href="">Mes customs</a></li>
+        <li><a href="">informations</a></li>
     </ul>
     <ul>
-        <h4>Nos reseaux</h4>
+        <h4>Nos réseaux</h4>
         <div class="reseaux">
             <a href="https://www.facebook.com/" target="_blank">
                 <li class="reseauLi"><img src="/Assets/IMG/image 33.png" alt="facebook"></li></a>
