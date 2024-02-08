@@ -24,7 +24,6 @@ if (isset($_POST["connect"])){
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="fr">
 <link rel="stylesheet" type="text/css" href="../../CSS/AccountGlobale.css">
