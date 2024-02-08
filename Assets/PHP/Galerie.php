@@ -45,7 +45,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
         <!-- Barre de navigation avec des liens vers différentes sections -->
         <ul class="nav-bar">
             <li><a href="../../index.html" class="brand">SNOWSTORM.GG</a></li>
-            <li><a href="../../Panier.html"><img src="../IMG/118089 1.png" class="opt"></a></li>
+            <li><a href="Panier.PHP"><img src="../IMG/118089 1.png" class="opt"></a></li>
             <li><a href="../Sous Dossier/Account/Account.php"><img src="../IMG/profil 1.png" class="opt"></a></li>
             <li><img src="../IMG/image 31.png" class="opt"></a></li>
         </ul>

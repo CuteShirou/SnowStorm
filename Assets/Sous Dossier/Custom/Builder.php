@@ -72,7 +72,7 @@ $presentation = $row['presentation'];
         <!-- Barre de navigation avec des liens vers differentes sections -->
         <ul class="nav-bar">
             <li><a href="../../../index.html" class="brand">SNOWSTORM.GG</a></li>
-            <li><a href="../../../Panier.html"><img src="../../IMG/118089 1.png" class="opt"></a></li>
+            <li><a href="../../PHP/Panier.php"><img src="../../IMG/118089 1.png" class="opt"></a></li>
             <li><a href="../Account/Account.php"><img src="../../IMG/profil 1.png" class="opt"></a></li>
             <li><img src="../../IMG/image 31.png" class="opt"></a></li>
         </ul>
@@ -97,13 +97,13 @@ $presentation = $row['presentation'];
                 <p class="paraSelect">Étape 1 : Choix de la base</p>
                 <div class="uncomplete">
                     <!-- Bloc indiquant les étapes incomplètes -->
-                    <a href="" class="para">2</a>
-                    <a href="" class="para">3</a>
-                    <a href="" class="para">4</a>
+                    <a href="#" class="para">2</a>
+                    <a href="#" class="para">3</a>
+                    <a href="#" class="para">4</a>
                 </div>
                 <div class="saver">
                     <!-- Bouton pour sauvegarder la configuration -->
-                    <a href="" class="save">Sauvegarder ma configuration</a>
+                    <a href="#" class="save">Sauvegarder ma configuration</a>
                 </div>
             </div>
             <div class="picBuilder">
@@ -170,13 +170,13 @@ $presentation = $row['presentation'];
                 <p class="para">Étape 1 : Choix de la base</p>
                 <div class="complete">
                     <!-- Bloc indiquant les étapes complétées -->
-                    <a href="" class="para">2</a>
-                    <a href="" class="para">3</a>
-                    <a href="" class="para">4</a>
+                    <a href="#" class="para">2</a>
+                    <a href="#" class="para">3</a>
+                    <a href="#" class="para">4</a>
                 </div>
                 <div class="saver">
                     <!-- Bouton pour sauvegarder la configuration -->
-                    <a href="" class="save">Sauvegarder ma configuration</a>
+                    <a href="#" class="save">Sauvegarder ma configuration</a>
                 </div>
             </div>
             <!-- Section pour le choix de la couleur de la base avec des boutons radio -->
@@ -219,13 +219,13 @@ $presentation = $row['presentation'];
         <p class="para">etape 1 : Choix de la base</p>
         <div class="complete">
             <!-- Bloc indiquant les etapes completees -->
-            <a href="" class="para">2</a>
-            <a href="" class="para">3</a>
-            <a href="" class="para">4</a>
+            <a href="#" class="para">2</a>
+            <a href="#" class="para">3</a>
+            <a href="#" class="para">4</a>
         </div>
         <div class="saver">
             <!-- Bouton pour sauvegarder la configuration -->
-            <a href="" class="save">Sauvegarder ma configuration</a>
+            <a href="#" class="save">Sauvegarder ma configuration</a>
         </div>
     </div>
     <!-- Section pour le choix de la couleur de la base avec des boutons radio -->
@@ -246,7 +246,7 @@ $presentation = $row['presentation'];
             </label>
             <!-- Ajoutez autant d'options que necessaire -->
         </div>
-        <a href="" class="suivant" onclick="goToStep(2)">Suivant</a>
+        <a href="#" class="suivant" onclick="goToStep(2)">Suivant</a>
     </div>
     </section>
 
