@@ -65,7 +65,6 @@ try {
     echo "Erreur : " . $e->getMessage();
 }
 
-
 ?>
 </body>
 </html>
