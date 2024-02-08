@@ -10,7 +10,6 @@ function currentSlide(n) {
   showSlide(slideIndex = n);
 }
 
-
 let currentSlideIndex = 1;
   const slides = document.querySelectorAll('.slide');
   const totalSlides = slides.length;
