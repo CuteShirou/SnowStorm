@@ -184,7 +184,7 @@ $presentation = $row['presentation'];
             <!-- Section pour le choix de la couleur de la base avec des boutons radio -->
             <div class="picBuilder">
                 <!-- Section pour l'affichage de l'image de prévisualisation -->
-                <img src="../../IMG/layout.png" width="754px" height="264px" alt="Preview">
+                <img src="../../IMG/layout.png" width="754px" height="264px" style="visibility:hidden" alt="Preview">
             </div>
             <div class="key-container">
                 <div class="key key1" id="key1"></div>
