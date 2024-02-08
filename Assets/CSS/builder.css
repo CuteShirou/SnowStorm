@@ -625,3 +625,7 @@ h2{
   .active-color {
     border-width: 4px; /* Highlight when active */
   }
+
+  #setColorButton {
+    margin-top: 10px;
+  }

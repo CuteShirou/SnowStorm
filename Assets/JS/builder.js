@@ -148,33 +148,48 @@ document.addEventListener("DOMContentLoaded", function() {
     // Get references to key elements and color options
     const keys = document.querySelectorAll('.key');
     const colorBoxes = document.querySelectorAll('.color-box');
+    const setColorButton = document.getElementById('setColorButton');
   
     let selectedColorBox = null;
   
-    // Event listener for color box click
     colorBoxes.forEach(colorBox => {
-      colorBox.addEventListener('click', function() {
-        // Remove active class from previous color box
-        if (selectedColorBox) {
-          selectedColorBox.classList.remove('active-color');
-        }
-  
-        // Highlight the selected color box
-        this.classList.add('active-color');
-        selectedColorBox = this;
+        colorBox.addEventListener('click', function() {
+          // Remove active class from previous color box
+          if (selectedColorBox) {
+            selectedColorBox.classList.remove('active-color');
+          }
+    
+          // Highlight the selected color box
+          this.classList.add('active-color');
+          selectedColorBox = this;
+        });
       });
-    });
-  
-    // Event listener for keycap click
-    keys.forEach(key => {
-      key.addEventListener('click', function() {
+    
+      // Event listener for keycap click
+      keys.forEach(key => {
+        key.addEventListener('click', function() {
+          if (selectedColorBox) {
+            // Get the selected color value
+            const color = selectedColorBox.style.backgroundColor;
+            
+            // Apply the selected color to the keycap
+            this.style.backgroundColor = color;
+          }
+        });
+      });
+    
+      // Event listener for "Set Color" button click
+      setColorButton.addEventListener('click', function() {
         if (selectedColorBox) {
           // Get the selected color value
           const color = selectedColorBox.style.backgroundColor;
-          
-          // Apply the selected color to the keycap
-          this.style.backgroundColor = color;
+    
+          // Apply the selected color to all key elements
+          keys.forEach(key => {
+            key.style.backgroundColor = color;
+          });
         }
       });
     });
-  });
+
+  
