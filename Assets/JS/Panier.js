@@ -252,3 +252,16 @@ if (window.location.pathname == '/panier/') {
         cartEmptyToggle();
     });
 }
+
+function panierEstVide() {
+    // Vous devez inclure ici la logique pour vérifier si le panier est vide
+    // Par exemple, vous pouvez vérifier si la session panier est vide
+    // Si votre panier est stocké dans une session nommée "panier", vous pouvez utiliser :
+    return empty($_SESSION['panier']);
+}
+
+// Redirige vers la page de commande si le panier n'est pas vide
+function redirigerVersCommande() {
+    header("Location: Commande.php");
+    exit;
+}
