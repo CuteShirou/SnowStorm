@@ -54,7 +54,7 @@ $presentation = $row['presentation'];
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
 <script src="https://apis.google.com/js/platform.js" async defer></script>
-<script src="../../JS/builder.js"></script>
+
 
 <head>
     <!-- Metadonnees de la page -->
@@ -77,12 +77,12 @@ $presentation = $row['presentation'];
             <li><img src="../../IMG/image 31.png" class="opt"></a></li>
         </ul>
         <ul class="nav-bar">
-            <li><a href="../../../Boutique.html" class="nav-but">NOS PRODUITS</a></li>
+            <li><a href="../../../Default.html" class="nav-but">NOS PRODUITS</a></li>
             <li><a href="../../../Personnaliser.html" class="nav-but">PERSONNALISER</a></li>
-            <li><a href="../../../Galerie.php" class="nav-but">GALERIE</a></li>
-            <li><a href="../../../Support-Sav.html" class="nav-but">SUPPORT/SAV</a></li>
+            <li><a href="../../PHP\Galerie.php" class="nav-but">GALERIE</a></li>
+            <li><a href="../../../Default.html" class="nav-but">SUPPORT/SAV</a></li>
             <li><a href="../../../FAQ.html" class="nav-but">FAQ</a></li>
-            <li><a href="../../..//PHP/Contact.php" class="nav-but">CONTACT</a></li>
+            <li><a href="../../PHP/Contact.php" class="nav-but">CONTACT</a></li>
         </ul>
     </nav>
 </header>
@@ -507,3 +507,4 @@ $presentation = $row['presentation'];
         </div>
     </ul>
 </footer>
+<script src="../../JS/builder.js"></script>
