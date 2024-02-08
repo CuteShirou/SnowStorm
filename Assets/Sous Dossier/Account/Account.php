@@ -70,13 +70,6 @@ $user = $query->fetch(PDO::FETCH_ASSOC);
         <?php 
         if ($user['Administrateur'] == 1) {
 
-            echo '<div>';
-            echo '<form method="post">';
-            echo '<input placeholder="Garantie Commerciale" name="gCom">';
-            echo '<input type="submit" name="editGarantie" value="Editer Garantie">';
-            echo '</form>';
-            echo '</div>';
-
             // Récupérer les noms de colonnes de la table 'KEYBOARDS'
             $query_columns = $connexion->query("SHOW COLUMNS FROM `KEYBOARDS`");
             $columns = $query_columns->fetchAll(PDO::FETCH_COLUMN);
