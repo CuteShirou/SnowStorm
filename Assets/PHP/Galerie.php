@@ -18,7 +18,6 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
 
 ?>
 
-
 <!DOCTYPE html>
 <!-- Inclusion des feuilles de style et des polices -->
 <html lang="fr">
