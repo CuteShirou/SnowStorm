@@ -1,7 +1,6 @@
 <?php
 // Inclure le fichier de connexion à la base de données
 include('../Sous Dossier/Account/BDDConnection.php');
-
 // Récupérer les données JSON envoyées depuis le client
 $data = json_decode(file_get_contents("php://input"));
 
