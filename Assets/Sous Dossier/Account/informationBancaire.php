@@ -8,6 +8,7 @@
         die("La connexion à la base de données a échoué : " . $connexion->connect_error);
     }
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
