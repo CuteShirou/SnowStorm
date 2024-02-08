@@ -38,12 +38,8 @@
       <input type="Pays" placeholder="Entrer Pays" name="Pays" id="Pays">
       <hr>
 
-      <label for="infSup"><b>informations supplÃ©mentaires</b></label>
+      <label for="infSup"><b>informations supplémentaires</b></label>
       <input type="text" placeholder="Entrer informations supplémentaires" name="infSup" id="infSup">
-      <hr>
-      
-      <label for="Ville"><b>Ville</b></label>
-      <input type="text" placeholder="Entrer Ville" name="date" id="Ville" required>
       <hr>
 
       <button type="submit" class="registerbtn">valider</button>
